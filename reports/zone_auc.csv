@@ -1,0 +1,5 @@
+zone_type,roc_auc
+commercial,0.8506172839506173
+dense_residential,0.7948343898721084
+normal_residential,0.8164423956446594
+quiet,0.8420773152081563

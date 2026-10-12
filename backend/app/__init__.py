@@ -1,0 +1,1 @@
+"""SharedCart backend package."""

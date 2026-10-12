@@ -1,0 +1,1560 @@
+item_id,item_type,item_price,is_small_item,price_band
+DRA12,Soft Drinks,142,0,100-150
+DRA24,Soft Drinks,164,0,150+
+DRA59,Soft Drinks,185,0,150+
+DRB01,Soft Drinks,190,0,150+
+DRB13,Soft Drinks,190,0,150+
+DRB24,Soft Drinks,154,0,150+
+DRB25,Soft Drinks,107,0,100-150
+DRB48,Soft Drinks,39,1,<50
+DRC01,Soft Drinks,49,1,<50
+DRC12,Soft Drinks,190,0,150+
+DRC13,Soft Drinks,124,0,100-150
+DRC24,Soft Drinks,153,0,150+
+DRC25,Soft Drinks,86,0,50-100
+DRC27,Dairy,246,0,150+
+DRC36,Soft Drinks,175,0,150+
+DRC49,Soft Drinks,145,0,100-150
+DRD01,Soft Drinks,56,1,50-100
+DRD12,Soft Drinks,91,0,50-100
+DRD13,Soft Drinks,64,1,50-100
+DRD15,Dairy,233,0,150+
+DRD24,Soft Drinks,142,0,100-150
+DRD25,Soft Drinks,113,0,100-150
+DRD27,Dairy,98,0,50-100
+DRD37,Soft Drinks,46,1,<50
+DRD49,Soft Drinks,238,0,150+
+DRD60,Soft Drinks,182,0,150+
+DRE01,Soft Drinks,242,0,150+
+DRE03,Dairy,47,1,<50
+DRE12,Soft Drinks,113,0,100-150
+DRE13,Soft Drinks,86,0,50-100
+DRE15,Dairy,76,0,50-100
+DRE25,Soft Drinks,92,0,50-100
+DRE27,Dairy,98,0,50-100
+DRE37,Soft Drinks,189,0,150+
+DRE48,Soft Drinks,197,0,150+
+DRE49,Soft Drinks,152,0,150+
+DRE60,Soft Drinks,226,0,150+
+DRF01,Soft Drinks,146,0,100-150
+DRF03,Dairy,40,1,<50
+DRF13,Soft Drinks,145,0,100-150
+DRF15,Dairy,153,0,150+
+DRF23,Hard Drinks,174,0,150+
+DRF25,Soft Drinks,36,1,<50
+DRF27,Dairy,153,0,150+
+DRF36,Soft Drinks,191,0,150+
+DRF37,Soft Drinks,262,0,150+
+DRF48,Soft Drinks,188,0,150+
+DRF49,Soft Drinks,113,0,100-150
+DRF51,Dairy,37,1,<50
+DRF60,Soft Drinks,239,0,150+
+DRG01,Soft Drinks,77,0,50-100
+DRG03,Dairy,154,0,150+
+DRG11,Hard Drinks,109,0,100-150
+DRG13,Soft Drinks,165,0,150+
+DRG15,Dairy,61,1,50-100
+DRG23,Hard Drinks,153,0,150+
+DRG25,Soft Drinks,187,0,150+
+DRG27,Dairy,41,1,<50
+DRG36,Soft Drinks,172,0,150+
+DRG37,Soft Drinks,155,0,150+
+DRG39,Dairy,53,1,50-100
+DRG48,Soft Drinks,146,0,100-150
+DRG49,Soft Drinks,244,0,150+
+DRG51,Dairy,165,0,150+
+DRH01,Soft Drinks,173,0,150+
+DRH03,Dairy,92,0,50-100
+DRH11,Hard Drinks,55,1,50-100
+DRH13,Soft Drinks,107,0,100-150
+DRH15,Dairy,44,1,<50
+DRH23,Hard Drinks,55,1,50-100
+DRH25,Soft Drinks,51,1,50-100
+DRH36,Soft Drinks,74,1,50-100
+DRH37,Soft Drinks,164,0,150+
+DRH39,Dairy,77,0,50-100
+DRH49,Soft Drinks,84,0,50-100
+DRH51,Dairy,89,0,50-100
+DRH59,Hard Drinks,74,1,50-100
+DRI01,Soft Drinks,173,0,150+
+DRI03,Dairy,177,0,150+
+DRI11,Hard Drinks,115,0,100-150
+DRI13,Soft Drinks,217,0,150+
+DRI23,Hard Drinks,160,0,150+
+DRI25,Soft Drinks,56,1,50-100
+DRI37,Soft Drinks,58,1,50-100
+DRI39,Dairy,56,1,50-100
+DRI47,Hard Drinks,144,0,100-150
+DRI49,Soft Drinks,82,0,50-100
+DRI51,Dairy,172,0,150+
+DRI59,Hard Drinks,224,0,150+
+DRJ01,Soft Drinks,161,0,150+
+DRJ11,Hard Drinks,189,0,150+
+DRJ13,Soft Drinks,160,0,150+
+DRJ23,Hard Drinks,189,0,150+
+DRJ24,Soft Drinks,186,0,150+
+DRJ25,Soft Drinks,49,1,<50
+DRJ35,Hard Drinks,61,1,50-100
+DRJ37,Soft Drinks,151,0,150+
+DRJ39,Dairy,219,0,150+
+DRJ47,Hard Drinks,174,0,150+
+DRJ49,Soft Drinks,128,0,100-150
+DRJ51,Dairy,231,0,150+
+DRJ59,Hard Drinks,39,1,<50
+DRK01,Soft Drinks,94,0,50-100
+DRK11,Hard Drinks,150,0,100-150
+DRK12,Soft Drinks,32,1,<50
+DRK13,Soft Drinks,199,0,150+
+DRK23,Hard Drinks,253,0,150+
+DRK35,Hard Drinks,38,1,<50
+DRK37,Soft Drinks,190,0,150+
+DRK39,Dairy,83,0,50-100
+DRK47,Hard Drinks,230,0,150+
+DRK49,Soft Drinks,41,1,<50
+DRK59,Hard Drinks,235,0,150+
+DRL01,Soft Drinks,233,0,150+
+DRL11,Hard Drinks,158,0,150+
+DRL23,Hard Drinks,106,0,100-150
+DRL35,Hard Drinks,43,1,<50
+DRL37,Soft Drinks,43,1,<50
+DRL47,Hard Drinks,126,0,100-150
+DRL49,Soft Drinks,143,0,100-150
+DRL59,Hard Drinks,55,1,50-100
+DRL60,Soft Drinks,152,0,150+
+DRM11,Hard Drinks,261,0,150+
+DRM23,Hard Drinks,172,0,150+
+DRM35,Hard Drinks,178,0,150+
+DRM37,Soft Drinks,197,0,150+
+DRM47,Hard Drinks,192,0,150+
+DRM48,Soft Drinks,37,1,<50
+DRM49,Soft Drinks,45,1,<50
+DRM59,Hard Drinks,154,0,150+
+DRN11,Hard Drinks,144,0,100-150
+DRN35,Hard Drinks,36,1,<50
+DRN36,Soft Drinks,95,0,50-100
+DRN37,Soft Drinks,167,0,150+
+DRN47,Hard Drinks,179,0,150+
+DRN59,Hard Drinks,46,1,<50
+DRO35,Hard Drinks,116,0,100-150
+DRO47,Hard Drinks,113,0,100-150
+DRO59,Hard Drinks,76,0,50-100
+DRP35,Hard Drinks,128,0,100-150
+DRP47,Hard Drinks,252,0,150+
+DRQ35,Hard Drinks,124,0,100-150
+DRY23,Soft Drinks,43,1,<50
+DRZ11,Soft Drinks,123,0,100-150
+DRZ24,Soft Drinks,120,0,100-150
+FDA01,Canned,59,1,50-100
+FDA02,Dairy,144,0,100-150
+FDA03,Dairy,145,0,100-150
+FDA04,Frozen Foods,259,0,150+
+FDA07,Fruits and Vegetables,123,0,100-150
+FDA08,Fruits and Vegetables,164,0,150+
+FDA09,Snack Foods,179,0,150+
+FDA10,Snack Foods,122,0,100-150
+FDA11,Baking Goods,94,0,50-100
+FDA13,Canned,38,1,<50
+FDA14,Dairy,147,0,100-150
+FDA15,Dairy,249,0,150+
+FDA16,Frozen Foods,221,0,150+
+FDA19,Fruits and Vegetables,128,0,100-150
+FDA20,Fruits and Vegetables,186,0,150+
+FDA21,Snack Foods,185,0,150+
+FDA22,Starchy Foods,167,0,150+
+FDA23,Baking Goods,101,0,100-150
+FDA25,Canned,103,0,100-150
+FDA26,Dairy,219,0,150+
+FDA27,Dairy,256,0,150+
+FDA28,Frozen Foods,126,0,100-150
+FDA31,Fruits and Vegetables,173,0,150+
+FDA32,Fruits and Vegetables,216,0,150+
+FDA33,Snack Foods,147,0,100-150
+FDA34,Starchy Foods,173,0,150+
+FDA35,Baking Goods,123,0,100-150
+FDA36,Baking Goods,185,0,150+
+FDA37,Canned,124,0,100-150
+FDA38,Dairy,240,0,150+
+FDA39,Meat,39,1,<50
+FDA40,Frozen Foods,88,0,50-100
+FDA43,Fruits and Vegetables,195,0,150+
+FDA44,Fruits and Vegetables,56,1,50-100
+FDA45,Snack Foods,177,0,150+
+FDA46,Snack Foods,195,0,150+
+FDA47,Baking Goods,163,0,150+
+FDA48,Baking Goods,222,0,150+
+FDA49,Canned,88,0,50-100
+FDA50,Dairy,97,0,50-100
+FDA51,Dairy,113,0,100-150
+FDA52,Frozen Foods,177,0,150+
+FDA55,Fruits and Vegetables,224,0,150+
+FDA56,Fruits and Vegetables,122,0,100-150
+FDA57,Snack Foods,41,1,<50
+FDA58,Snack Foods,236,0,150+
+FDB02,Canned,176,0,150+
+FDB03,Dairy,241,0,150+
+FDB04,Dairy,88,0,50-100
+FDB05,Frozen Foods,247,0,150+
+FDB08,Fruits and Vegetables,160,0,150+
+FDB09,Fruits and Vegetables,125,0,100-150
+FDB10,Snack Foods,235,0,150+
+FDB11,Starchy Foods,225,0,150+
+FDB12,Baking Goods,104,0,100-150
+FDB14,Canned,93,0,50-100
+FDB15,Dairy,264,0,150+
+FDB16,Dairy,88,0,50-100
+FDB17,Frozen Foods,181,0,150+
+FDB20,Fruits and Vegetables,78,0,50-100
+FDB21,Fruits and Vegetables,242,0,150+
+FDB22,Snack Foods,154,0,150+
+FDB23,Starchy Foods,226,0,150+
+FDB26,Canned,53,1,50-100
+FDB27,Dairy,197,0,150+
+FDB28,Dairy,198,0,150+
+FDB29,Frozen Foods,114,0,100-150
+FDB32,Fruits and Vegetables,94,0,50-100
+FDB33,Fruits and Vegetables,159,0,150+
+FDB34,Snack Foods,86,0,50-100
+FDB35,Starchy Foods,92,0,50-100
+FDB36,Baking Goods,132,0,100-150
+FDB37,Baking Goods,241,0,150+
+FDB38,Canned,159,0,150+
+FDB39,Dairy,57,1,50-100
+FDB40,Dairy,145,0,100-150
+FDB41,Frozen Foods,47,1,<50
+FDB44,Fruits and Vegetables,211,0,150+
+FDB45,Fruits and Vegetables,105,0,100-150
+FDB46,Snack Foods,212,0,150+
+FDB47,Snack Foods,210,0,150+
+FDB49,Baking Goods,98,0,50-100
+FDB50,Canned,78,0,50-100
+FDB51,Dairy,62,1,50-100
+FDB52,Dairy,257,0,150+
+FDB53,Frozen Foods,148,0,100-150
+FDB56,Fruits and Vegetables,187,0,150+
+FDB57,Fruits and Vegetables,222,0,150+
+FDB58,Snack Foods,142,0,100-150
+FDB59,Snack Foods,198,0,150+
+FDB60,Baking Goods,195,0,150+
+FDC02,Canned,259,0,150+
+FDC03,Dairy,195,0,150+
+FDC04,Dairy,242,0,150+
+FDC05,Frozen Foods,197,0,150+
+FDC08,Fruits and Vegetables,227,0,150+
+FDC09,Fruits and Vegetables,102,0,100-150
+FDC10,Snack Foods,120,0,100-150
+FDC11,Starchy Foods,90,0,50-100
+FDC14,Canned,42,1,<50
+FDC15,Dairy,157,0,150+
+FDC16,Dairy,86,0,50-100
+FDC17,Frozen Foods,211,0,150+
+FDC20,Fruits and Vegetables,56,1,50-100
+FDC21,Fruits and Vegetables,109,0,100-150
+FDC22,Snack Foods,194,0,150+
+FDC23,Starchy Foods,178,0,150+
+FDC26,Canned,111,0,100-150
+FDC28,Frozen Foods,109,0,100-150
+FDC29,Frozen Foods,114,0,100-150
+FDC32,Fruits and Vegetables,92,0,50-100
+FDC33,Fruits and Vegetables,197,0,150+
+FDC34,Snack Foods,156,0,150+
+FDC35,Starchy Foods,207,0,150+
+FDC37,Baking Goods,107,0,100-150
+FDC38,Canned,133,0,100-150
+FDC39,Dairy,207,0,150+
+FDC40,Dairy,78,0,50-100
+FDC41,Frozen Foods,77,0,50-100
+FDC44,Fruits and Vegetables,114,0,100-150
+FDC45,Fruits and Vegetables,171,0,150+
+FDC46,Snack Foods,184,0,150+
+FDC47,Snack Foods,228,0,150+
+FDC48,Baking Goods,83,0,50-100
+FDC50,Canned,95,0,50-100
+FDC51,Dairy,123,0,100-150
+FDC52,Dairy,150,0,100-150
+FDC53,Frozen Foods,98,0,50-100
+FDC56,Fruits and Vegetables,120,0,100-150
+FDC57,Fruits and Vegetables,194,0,150+
+FDC58,Snack Foods,44,1,<50
+FDC59,Starchy Foods,65,1,50-100
+FDC60,Baking Goods,88,0,50-100
+FDD02,Canned,118,0,100-150
+FDD03,Dairy,233,0,150+
+FDD04,Dairy,143,0,100-150
+FDD05,Frozen Foods,121,0,100-150
+FDD08,Fruits and Vegetables,38,1,<50
+FDD09,Fruits and Vegetables,181,0,150+
+FDD10,Snack Foods,178,0,150+
+FDD11,Starchy Foods,253,0,150+
+FDD14,Canned,184,0,150+
+FDD16,Frozen Foods,75,0,50-100
+FDD17,Frozen Foods,238,0,150+
+FDD20,Fruits and Vegetables,125,0,100-150
+FDD21,Fruits and Vegetables,114,0,100-150
+FDD22,Snack Foods,114,0,100-150
+FDD23,Starchy Foods,187,0,150+
+FDD26,Canned,185,0,150+
+FDD28,Frozen Foods,59,1,50-100
+FDD29,Frozen Foods,253,0,150+
+FDD32,Fruits and Vegetables,81,0,50-100
+FDD33,Fruits and Vegetables,233,0,150+
+FDD34,Snack Foods,162,0,150+
+FDD35,Starchy Foods,120,0,100-150
+FDD36,Baking Goods,119,0,100-150
+FDD38,Canned,102,0,100-150
+FDD39,Dairy,217,0,150+
+FDD40,Dairy,193,0,150+
+FDD41,Frozen Foods,106,0,100-150
+FDD44,Fruits and Vegetables,258,0,150+
+FDD45,Fruits and Vegetables,95,0,50-100
+FDD46,Snack Foods,154,0,150+
+FDD47,Starchy Foods,172,0,150+
+FDD48,Baking Goods,116,0,100-150
+FDD50,Canned,169,0,150+
+FDD51,Dairy,45,1,<50
+FDD52,Dairy,110,0,100-150
+FDD53,Frozen Foods,43,1,<50
+FDD56,Fruits and Vegetables,177,0,150+
+FDD57,Fruits and Vegetables,95,0,50-100
+FDD58,Snack Foods,100,0,50-100
+FDD59,Starchy Foods,80,0,50-100
+FDE02,Canned,94,0,50-100
+FDE04,Frozen Foods,180,0,150+
+FDE05,Frozen Foods,146,0,100-150
+FDE08,Fruits and Vegetables,148,0,100-150
+FDE09,Fruits and Vegetables,111,0,100-150
+FDE10,Snack Foods,132,0,100-150
+FDE11,Starchy Foods,185,0,150+
+FDE14,Canned,99,0,50-100
+FDE16,Frozen Foods,208,0,150+
+FDE17,Frozen Foods,151,0,150+
+FDE20,Fruits and Vegetables,169,0,150+
+FDE21,Fruits and Vegetables,116,0,100-150
+FDE22,Snack Foods,159,0,150+
+FDE23,Starchy Foods,47,1,<50
+FDE24,Baking Goods,142,0,100-150
+FDE26,Canned,144,0,100-150
+FDE28,Frozen Foods,230,0,150+
+FDE29,Frozen Foods,61,1,50-100
+FDE32,Fruits and Vegetables,39,1,<50
+FDE33,Fruits and Vegetables,79,0,50-100
+FDE34,Snack Foods,183,0,150+
+FDE35,Starchy Foods,59,1,50-100
+FDE36,Baking Goods,163,0,150+
+FDE38,Canned,164,0,150+
+FDE39,Dairy,119,0,100-150
+FDE40,Dairy,62,1,50-100
+FDE41,Frozen Foods,85,0,50-100
+FDE44,Fruits and Vegetables,50,1,<50
+FDE45,Fruits and Vegetables,179,0,150+
+FDE46,Snack Foods,152,0,150+
+FDE47,Starchy Foods,125,0,100-150
+FDE50,Canned,188,0,150+
+FDE51,Dairy,44,1,<50
+FDE52,Dairy,89,0,50-100
+FDE53,Frozen Foods,107,0,100-150
+FDE56,Fruits and Vegetables,63,1,50-100
+FDE57,Fruits and Vegetables,141,0,100-150
+FDE58,Snack Foods,119,0,100-150
+FDE59,Starchy Foods,35,1,<50
+FDF02,Canned,102,0,100-150
+FDF04,Frozen Foods,258,0,150+
+FDF05,Frozen Foods,263,0,150+
+FDF08,Fruits and Vegetables,89,0,50-100
+FDF09,Fruits and Vegetables,38,1,<50
+FDF10,Snack Foods,148,0,100-150
+FDF11,Starchy Foods,240,0,150+
+FDF12,Baking Goods,148,0,100-150
+FDF14,Canned,152,0,150+
+FDF16,Frozen Foods,148,0,100-150
+FDF17,Frozen Foods,197,0,150+
+FDF20,Fruits and Vegetables,197,0,150+
+FDF21,Fruits and Vegetables,190,0,150+
+FDF22,Snack Foods,213,0,150+
+FDF24,Baking Goods,83,0,50-100
+FDF26,Canned,154,0,150+
+FDF28,Frozen Foods,124,0,100-150
+FDF29,Frozen Foods,130,0,100-150
+FDF32,Fruits and Vegetables,198,0,150+
+FDF33,Seafood,108,0,100-150
+FDF34,Snack Foods,198,0,150+
+FDF35,Starchy Foods,107,0,100-150
+FDF38,Canned,40,1,<50
+FDF39,Dairy,262,0,150+
+FDF40,Dairy,249,0,150+
+FDF41,Frozen Foods,246,0,150+
+FDF44,Fruits and Vegetables,131,0,100-150
+FDF45,Fruits and Vegetables,58,1,50-100
+FDF46,Snack Foods,115,0,100-150
+FDF47,Starchy Foods,224,0,150+
+FDF50,Canned,197,0,150+
+FDF52,Frozen Foods,183,0,150+
+FDF53,Frozen Foods,180,0,150+
+FDF56,Fruits and Vegetables,181,0,150+
+FDF57,Fruits and Vegetables,170,0,150+
+FDF58,Snack Foods,64,1,50-100
+FDF59,Starchy Foods,126,0,100-150
+FDG02,Canned,190,0,150+
+FDG04,Frozen Foods,187,0,150+
+FDG05,Frozen Foods,156,0,150+
+FDG08,Fruits and Vegetables,172,0,150+
+FDG09,Fruits and Vegetables,187,0,150+
+FDG10,Snack Foods,57,1,50-100
+FDG12,Baking Goods,121,0,100-150
+FDG14,Canned,151,0,150+
+FDG16,Frozen Foods,215,0,150+
+FDG17,Frozen Foods,245,0,150+
+FDG20,Fruits and Vegetables,178,0,150+
+FDG21,Seafood,150,0,100-150
+FDG22,Snack Foods,37,1,<50
+FDG24,Baking Goods,84,0,50-100
+FDG26,Canned,256,0,150+
+FDG28,Frozen Foods,246,0,150+
+FDG29,Frozen Foods,42,1,<50
+FDG31,Meat,64,1,50-100
+FDG32,Fruits and Vegetables,222,0,150+
+FDG33,Seafood,172,0,150+
+FDG34,Snack Foods,108,0,100-150
+FDG35,Starchy Foods,174,0,150+
+FDG38,Canned,85,0,50-100
+FDG40,Frozen Foods,33,1,<50
+FDG41,Frozen Foods,111,0,100-150
+FDG44,Fruits and Vegetables,55,1,50-100
+FDG45,Fruits and Vegetables,212,0,150+
+FDG46,Snack Foods,114,0,100-150
+FDG47,Starchy Foods,262,0,150+
+FDG50,Canned,91,0,50-100
+FDG52,Frozen Foods,47,1,<50
+FDG53,Frozen Foods,140,0,100-150
+FDG56,Fruits and Vegetables,61,1,50-100
+FDG57,Fruits and Vegetables,49,1,<50
+FDG58,Snack Foods,156,0,150+
+FDG59,Starchy Foods,38,1,<50
+FDG60,Baking Goods,234,0,150+
+FDH02,Canned,91,0,50-100
+FDH04,Frozen Foods,91,0,50-100
+FDH05,Frozen Foods,232,0,150+
+FDH08,Fruits and Vegetables,229,0,150+
+FDH09,Seafood,52,1,50-100
+FDH10,Snack Foods,194,0,150+
+FDH12,Baking Goods,106,0,100-150
+FDH14,Canned,141,0,100-150
+FDH16,Frozen Foods,89,0,50-100
+FDH17,Frozen Foods,97,0,50-100
+FDH19,Meat,174,0,150+
+FDH20,Fruits and Vegetables,97,0,50-100
+FDH21,Seafood,159,0,150+
+FDH22,Snack Foods,128,0,100-150
+FDH24,Baking Goods,157,0,150+
+FDH26,Canned,142,0,100-150
+FDH27,Dairy,143,0,100-150
+FDH28,Frozen Foods,38,1,<50
+FDH31,Meat,99,0,50-100
+FDH32,Fruits and Vegetables,97,0,50-100
+FDH33,Snack Foods,44,1,<50
+FDH34,Snack Foods,185,0,150+
+FDH35,Starchy Foods,165,0,150+
+FDH38,Canned,116,0,100-150
+FDH40,Frozen Foods,81,0,50-100
+FDH41,Frozen Foods,214,0,150+
+FDH44,Fruits and Vegetables,147,0,100-150
+FDH45,Fruits and Vegetables,42,1,<50
+FDH46,Snack Foods,103,0,100-150
+FDH47,Starchy Foods,97,0,50-100
+FDH48,Baking Goods,86,0,50-100
+FDH50,Canned,185,0,150+
+FDH52,Frozen Foods,61,1,50-100
+FDH53,Frozen Foods,84,0,50-100
+FDH56,Fruits and Vegetables,116,0,100-150
+FDH57,Fruits and Vegetables,132,0,100-150
+FDH58,Snack Foods,116,0,100-150
+FDH60,Baking Goods,197,0,150+
+FDI02,Canned,113,0,100-150
+FDI04,Frozen Foods,198,0,150+
+FDI05,Frozen Foods,76,0,50-100
+FDI07,Meat,198,0,150+
+FDI08,Fruits and Vegetables,249,0,150+
+FDI09,Seafood,240,0,150+
+FDI10,Snack Foods,173,0,150+
+FDI12,Baking Goods,88,0,50-100
+FDI14,Canned,140,0,100-150
+FDI15,Dairy,264,0,150+
+FDI16,Frozen Foods,54,1,50-100
+FDI19,Meat,243,0,150+
+FDI20,Fruits and Vegetables,211,0,150+
+FDI21,Snack Foods,63,1,50-100
+FDI22,Snack Foods,210,0,150+
+FDI24,Baking Goods,177,0,150+
+FDI26,Canned,178,0,150+
+FDI27,Dairy,44,1,<50
+FDI28,Frozen Foods,79,0,50-100
+FDI32,Fruits and Vegetables,115,0,100-150
+FDI33,Snack Foods,91,0,50-100
+FDI34,Snack Foods,231,0,150+
+FDI35,Starchy Foods,182,0,150+
+FDI36,Baking Goods,198,0,150+
+FDI38,Canned,207,0,150+
+FDI40,Frozen Foods,100,0,50-100
+FDI41,Frozen Foods,147,0,100-150
+FDI44,Fruits and Vegetables,77,0,50-100
+FDI45,Fruits and Vegetables,175,0,150+
+FDI46,Snack Foods,253,0,150+
+FDI48,Baking Goods,52,1,50-100
+FDI50,Canned,229,0,150+
+FDI52,Frozen Foods,122,0,100-150
+FDI53,Frozen Foods,162,0,150+
+FDI56,Fruits and Vegetables,92,0,50-100
+FDI57,Seafood,197,0,150+
+FDI58,Snack Foods,93,0,50-100
+FDI60,Baking Goods,63,1,50-100
+FDJ02,Canned,147,0,100-150
+FDJ03,Dairy,49,1,<50
+FDJ04,Frozen Foods,118,0,100-150
+FDJ07,Meat,117,0,100-150
+FDJ08,Fruits and Vegetables,190,0,150+
+FDJ09,Snack Foods,45,1,<50
+FDJ10,Snack Foods,141,0,100-150
+FDJ12,Baking Goods,208,0,150+
+FDJ14,Canned,79,0,50-100
+FDJ15,Dairy,183,0,150+
+FDJ16,Frozen Foods,59,1,50-100
+FDJ20,Fruits and Vegetables,124,0,100-150
+FDJ21,Snack Foods,146,0,100-150
+FDJ22,Snack Foods,192,0,150+
+FDJ26,Canned,215,0,150+
+FDJ27,Meat,102,0,100-150
+FDJ28,Frozen Foods,192,0,150+
+FDJ32,Fruits and Vegetables,61,1,50-100
+FDJ33,Snack Foods,123,0,100-150
+FDJ34,Snack Foods,126,0,100-150
+FDJ36,Baking Goods,103,0,100-150
+FDJ38,Canned,190,0,150+
+FDJ40,Frozen Foods,109,0,100-150
+FDJ41,Frozen Foods,261,0,150+
+FDJ44,Fruits and Vegetables,174,0,150+
+FDJ45,Seafood,34,1,<50
+FDJ46,Snack Foods,174,0,150+
+FDJ48,Baking Goods,247,0,150+
+FDJ50,Canned,52,1,50-100
+FDJ52,Frozen Foods,160,0,150+
+FDJ53,Frozen Foods,121,0,100-150
+FDJ55,Meat,225,0,150+
+FDJ56,Fruits and Vegetables,100,0,50-100
+FDJ57,Seafood,186,0,150+
+FDJ58,Snack Foods,172,0,150+
+FDJ60,Baking Goods,165,0,150+
+FDK02,Canned,120,0,100-150
+FDK03,Dairy,255,0,150+
+FDK04,Frozen Foods,56,1,50-100
+FDK08,Fruits and Vegetables,101,0,100-150
+FDK09,Snack Foods,229,0,150+
+FDK10,Snack Foods,180,0,150+
+FDK14,Canned,83,0,50-100
+FDK15,Meat,99,0,50-100
+FDK16,Frozen Foods,95,0,50-100
+FDK20,Fruits and Vegetables,122,0,100-150
+FDK21,Snack Foods,250,0,150+
+FDK22,Snack Foods,216,0,150+
+FDK24,Baking Goods,46,1,<50
+FDK25,Breakfast,168,0,150+
+FDK26,Canned,186,0,150+
+FDK27,Meat,121,0,100-150
+FDK28,Frozen Foods,258,0,150+
+FDK32,Fruits and Vegetables,153,0,150+
+FDK33,Snack Foods,213,0,150+
+FDK34,Snack Foods,239,0,150+
+FDK36,Baking Goods,48,1,<50
+FDK38,Canned,149,0,100-150
+FDK40,Frozen Foods,263,0,150+
+FDK41,Frozen Foods,85,0,50-100
+FDK43,Meat,127,0,100-150
+FDK44,Fruits and Vegetables,174,0,150+
+FDK45,Seafood,112,0,100-150
+FDK46,Snack Foods,258,0,150+
+FDK48,Baking Goods,75,0,50-100
+FDK50,Canned,162,0,150+
+FDK51,Dairy,265,0,150+
+FDK52,Frozen Foods,225,0,150+
+FDK55,Meat,89,0,50-100
+FDK56,Fruits and Vegetables,186,0,150+
+FDK57,Snack Foods,120,0,100-150
+FDK58,Snack Foods,102,0,100-150
+FDK60,Baking Goods,97,0,50-100
+FDL02,Canned,107,0,100-150
+FDL03,Meat,196,0,150+
+FDL04,Frozen Foods,106,0,100-150
+FDL08,Fruits and Vegetables,245,0,150+
+FDL09,Snack Foods,168,0,150+
+FDL10,Snack Foods,99,0,50-100
+FDL12,Baking Goods,60,1,50-100
+FDL13,Breakfast,233,0,150+
+FDL14,Canned,156,0,150+
+FDL15,Meat,153,0,150+
+FDL16,Frozen Foods,47,1,<50
+FDL20,Fruits and Vegetables,112,0,100-150
+FDL21,Snack Foods,40,1,<50
+FDL22,Snack Foods,91,0,50-100
+FDL24,Baking Goods,173,0,150+
+FDL25,Breakfast,92,0,50-100
+FDL26,Canned,156,0,150+
+FDL27,Meat,65,1,50-100
+FDL28,Frozen Foods,230,0,150+
+FDL32,Fruits and Vegetables,111,0,100-150
+FDL33,Snack Foods,195,0,150+
+FDL34,Snack Foods,141,0,100-150
+FDL36,Baking Goods,90,0,50-100
+FDL38,Canned,89,0,50-100
+FDL39,Dairy,181,0,150+
+FDL40,Frozen Foods,96,0,50-100
+FDL43,Meat,77,0,50-100
+FDL44,Fruits and Vegetables,162,0,150+
+FDL45,Snack Foods,125,0,100-150
+FDL46,Snack Foods,118,0,100-150
+FDL48,Baking Goods,48,1,<50
+FDL50,Canned,125,0,100-150
+FDL51,Dairy,214,0,150+
+FDL52,Frozen Foods,38,1,<50
+FDL56,Fruits and Vegetables,87,0,50-100
+FDL57,Snack Foods,259,0,150+
+FDL58,Snack Foods,264,0,150+
+FDM01,Breakfast,103,0,100-150
+FDM02,Canned,87,0,50-100
+FDM03,Meat,108,0,100-150
+FDM04,Frozen Foods,52,1,50-100
+FDM08,Fruits and Vegetables,224,0,150+
+FDM09,Snack Foods,170,0,150+
+FDM10,Snack Foods,214,0,150+
+FDM12,Baking Goods,189,0,150+
+FDM13,Breakfast,132,0,100-150
+FDM14,Canned,108,0,100-150
+FDM15,Meat,151,0,150+
+FDM16,Frozen Foods,75,0,50-100
+FDM20,Fruits and Vegetables,245,0,150+
+FDM21,Snack Foods,258,0,150+
+FDM22,Snack Foods,54,1,50-100
+FDM24,Baking Goods,152,0,150+
+FDM25,Breakfast,175,0,150+
+FDM27,Meat,158,0,150+
+FDM28,Frozen Foods,180,0,150+
+FDM32,Fruits and Vegetables,90,0,50-100
+FDM33,Snack Foods,220,0,150+
+FDM34,Snack Foods,132,0,100-150
+FDM36,Baking Goods,172,0,150+
+FDM38,Canned,54,1,50-100
+FDM39,Dairy,178,0,150+
+FDM40,Frozen Foods,143,0,100-150
+FDM44,Fruits and Vegetables,104,0,100-150
+FDM45,Snack Foods,121,0,100-150
+FDM46,Snack Foods,94,0,50-100
+FDM50,Canned,60,1,50-100
+FDM51,Meat,102,0,100-150
+FDM52,Frozen Foods,148,0,100-150
+FDM56,Fruits and Vegetables,110,0,100-150
+FDM57,Snack Foods,84,0,50-100
+FDM58,Snack Foods,112,0,100-150
+FDM60,Baking Goods,41,1,<50
+FDN01,Breakfast,177,0,150+
+FDN02,Canned,208,0,150+
+FDN03,Meat,250,0,150+
+FDN04,Frozen Foods,179,0,150+
+FDN08,Fruits and Vegetables,117,0,100-150
+FDN09,Snack Foods,244,0,150+
+FDN10,Snack Foods,120,0,100-150
+FDN12,Baking Goods,112,0,100-150
+FDN13,Breakfast,99,0,50-100
+FDN15,Meat,140,0,100-150
+FDN16,Frozen Foods,104,0,100-150
+FDN20,Fruits and Vegetables,169,0,150+
+FDN21,Snack Foods,161,0,150+
+FDN22,Snack Foods,252,0,150+
+FDN23,Breads,146,0,100-150
+FDN24,Baking Goods,55,1,50-100
+FDN25,Breakfast,58,1,50-100
+FDN27,Meat,117,0,100-150
+FDN28,Frozen Foods,102,0,100-150
+FDN31,Fruits and Vegetables,190,0,150+
+FDN32,Fruits and Vegetables,185,0,150+
+FDN33,Snack Foods,94,0,50-100
+FDN34,Snack Foods,169,0,150+
+FDN38,Canned,251,0,150+
+FDN39,Meat,168,0,150+
+FDN40,Frozen Foods,154,0,150+
+FDN44,Fruits and Vegetables,160,0,150+
+FDN45,Snack Foods,223,0,150+
+FDN46,Snack Foods,102,0,100-150
+FDN48,Baking Goods,91,0,50-100
+FDN49,Breakfast,41,1,<50
+FDN50,Canned,93,0,50-100
+FDN51,Meat,261,0,150+
+FDN52,Frozen Foods,87,0,50-100
+FDN56,Fruits and Vegetables,145,0,100-150
+FDN57,Snack Foods,142,0,100-150
+FDN58,Snack Foods,231,0,150+
+FDN60,Baking Goods,159,0,150+
+FDO01,Breakfast,129,0,100-150
+FDO03,Meat,229,0,150+
+FDO04,Frozen Foods,55,1,50-100
+FDO08,Fruits and Vegetables,165,0,150+
+FDO09,Snack Foods,262,0,150+
+FDO10,Snack Foods,57,1,50-100
+FDO11,Breads,249,0,150+
+FDO12,Baking Goods,195,0,150+
+FDO13,Breakfast,165,0,150+
+FDO15,Meat,73,1,50-100
+FDO16,Frozen Foods,83,0,50-100
+FDO19,Fruits and Vegetables,48,1,<50
+FDO20,Fruits and Vegetables,253,0,150+
+FDO21,Snack Foods,224,0,150+
+FDO22,Snack Foods,80,0,50-100
+FDO23,Breads,94,0,50-100
+FDO24,Baking Goods,158,0,150+
+FDO25,Canned,209,0,150+
+FDO27,Meat,95,0,50-100
+FDO28,Frozen Foods,121,0,100-150
+FDO31,Fruits and Vegetables,80,0,50-100
+FDO32,Fruits and Vegetables,46,1,<50
+FDO33,Snack Foods,115,0,100-150
+FDO34,Snack Foods,167,0,150+
+FDO36,Baking Goods,179,0,150+
+FDO37,Breakfast,231,0,150+
+FDO38,Canned,78,0,50-100
+FDO39,Meat,184,0,150+
+FDO40,Frozen Foods,149,0,100-150
+FDO44,Fruits and Vegetables,110,0,100-150
+FDO45,Snack Foods,89,0,50-100
+FDO46,Snack Foods,189,0,150+
+FDO48,Baking Goods,220,0,150+
+FDO49,Breakfast,49,1,<50
+FDO50,Canned,91,0,50-100
+FDO51,Meat,43,1,<50
+FDO52,Frozen Foods,171,0,150+
+FDO56,Fruits and Vegetables,118,0,100-150
+FDO57,Snack Foods,161,0,150+
+FDO58,Snack Foods,165,0,150+
+FDO60,Baking Goods,44,1,<50
+FDP01,Breakfast,152,0,150+
+FDP03,Meat,123,0,100-150
+FDP04,Frozen Foods,63,1,50-100
+FDP07,Fruits and Vegetables,196,0,150+
+FDP08,Fruits and Vegetables,194,0,150+
+FDP09,Snack Foods,213,0,150+
+FDP10,Snack Foods,107,0,100-150
+FDP11,Breads,218,0,150+
+FDP12,Baking Goods,36,1,<50
+FDP13,Canned,41,1,<50
+FDP15,Meat,256,0,150+
+FDP16,Frozen Foods,245,0,150+
+FDP19,Fruits and Vegetables,129,0,100-150
+FDP20,Fruits and Vegetables,127,0,100-150
+FDP21,Snack Foods,189,0,150+
+FDP22,Snack Foods,52,1,50-100
+FDP23,Breads,218,0,150+
+FDP24,Baking Goods,120,0,100-150
+FDP25,Canned,217,0,150+
+FDP26,Dairy,105,0,100-150
+FDP27,Meat,189,0,150+
+FDP28,Frozen Foods,261,0,150+
+FDP31,Fruits and Vegetables,64,1,50-100
+FDP32,Fruits and Vegetables,127,0,100-150
+FDP33,Snack Foods,256,0,150+
+FDP34,Snack Foods,157,0,150+
+FDP36,Baking Goods,51,1,50-100
+FDP37,Breakfast,128,0,100-150
+FDP38,Canned,51,1,50-100
+FDP39,Meat,53,1,50-100
+FDP40,Frozen Foods,111,0,100-150
+FDP44,Fruits and Vegetables,102,0,100-150
+FDP45,Snack Foods,253,0,150+
+FDP46,Snack Foods,90,0,50-100
+FDP48,Baking Goods,182,0,150+
+FDP49,Breakfast,55,1,50-100
+FDP51,Meat,120,0,100-150
+FDP52,Frozen Foods,229,0,150+
+FDP56,Fruits and Vegetables,48,1,<50
+FDP57,Snack Foods,103,0,100-150
+FDP58,Snack Foods,219,0,150+
+FDP59,Breads,104,0,100-150
+FDP60,Baking Goods,101,0,100-150
+FDQ01,Canned,255,0,150+
+FDQ03,Meat,238,0,150+
+FDQ04,Frozen Foods,41,1,<50
+FDQ07,Fruits and Vegetables,221,0,150+
+FDQ08,Fruits and Vegetables,62,1,50-100
+FDQ09,Snack Foods,115,0,100-150
+FDQ10,Snack Foods,172,0,150+
+FDQ11,Breads,258,0,150+
+FDQ12,Baking Goods,231,0,150+
+FDQ13,Canned,83,0,50-100
+FDQ14,Dairy,149,0,100-150
+FDQ15,Meat,82,0,50-100
+FDQ16,Frozen Foods,109,0,100-150
+FDQ19,Fruits and Vegetables,242,0,150+
+FDQ20,Fruits and Vegetables,40,1,<50
+FDQ21,Snack Foods,121,0,100-150
+FDQ22,Snack Foods,40,1,<50
+FDQ23,Breads,102,0,100-150
+FDQ24,Baking Goods,252,0,150+
+FDQ25,Canned,173,0,150+
+FDQ26,Dairy,59,1,50-100
+FDQ27,Meat,103,0,100-150
+FDQ28,Frozen Foods,154,0,150+
+FDQ31,Fruits and Vegetables,88,0,50-100
+FDQ32,Fruits and Vegetables,123,0,100-150
+FDQ33,Snack Foods,150,0,100-150
+FDQ34,Snack Foods,107,0,100-150
+FDQ36,Baking Goods,37,1,<50
+FDQ37,Breakfast,193,0,150+
+FDQ39,Meat,191,0,150+
+FDQ40,Frozen Foods,176,0,150+
+FDQ44,Fruits and Vegetables,121,0,100-150
+FDQ45,Snack Foods,184,0,150+
+FDQ46,Snack Foods,112,0,100-150
+FDQ47,Breads,34,1,<50
+FDQ48,Baking Goods,97,0,50-100
+FDQ49,Breakfast,156,0,150+
+FDQ51,Meat,47,1,<50
+FDQ52,Frozen Foods,248,0,150+
+FDQ55,Fruits and Vegetables,115,0,100-150
+FDQ56,Fruits and Vegetables,84,0,50-100
+FDQ57,Snack Foods,146,0,100-150
+FDQ58,Snack Foods,154,0,150+
+FDQ59,Breads,85,0,50-100
+FDQ60,Baking Goods,121,0,100-150
+FDR01,Canned,199,0,150+
+FDR02,Dairy,111,0,100-150
+FDR03,Meat,206,0,150+
+FDR04,Frozen Foods,98,0,50-100
+FDR07,Fruits and Vegetables,96,0,50-100
+FDR08,Fruits and Vegetables,111,0,100-150
+FDR09,Snack Foods,259,0,150+
+FDR10,Snack Foods,163,0,150+
+FDR11,Breads,160,0,150+
+FDR12,Baking Goods,172,0,150+
+FDR13,Canned,117,0,100-150
+FDR14,Dairy,54,1,50-100
+FDR15,Meat,155,0,150+
+FDR16,Frozen Foods,214,0,150+
+FDR19,Fruits and Vegetables,146,0,100-150
+FDR20,Fruits and Vegetables,46,1,<50
+FDR21,Snack Foods,176,0,150+
+FDR22,Snack Foods,111,0,100-150
+FDR23,Breads,177,0,150+
+FDR24,Baking Goods,89,0,50-100
+FDR25,Canned,265,0,150+
+FDR26,Dairy,178,0,150+
+FDR27,Meat,133,0,100-150
+FDR28,Frozen Foods,164,0,150+
+FDR31,Fruits and Vegetables,145,0,100-150
+FDR32,Fruits and Vegetables,228,0,150+
+FDR33,Snack Foods,109,0,100-150
+FDR34,Snack Foods,229,0,150+
+FDR35,Breads,199,0,150+
+FDR36,Baking Goods,42,1,<50
+FDR37,Breakfast,182,0,150+
+FDR39,Meat,183,0,150+
+FDR40,Frozen Foods,79,0,50-100
+FDR43,Fruits and Vegetables,38,1,<50
+FDR44,Fruits and Vegetables,130,0,100-150
+FDR45,Snack Foods,240,0,150+
+FDR46,Snack Foods,147,0,100-150
+FDR47,Breads,196,0,150+
+FDR48,Baking Goods,152,0,150+
+FDR49,Canned,48,1,<50
+FDR51,Meat,150,0,100-150
+FDR52,Frozen Foods,191,0,150+
+FDR55,Fruits and Vegetables,189,0,150+
+FDR56,Fruits and Vegetables,198,0,150+
+FDR57,Snack Foods,156,0,150+
+FDR58,Snack Foods,93,0,50-100
+FDR59,Breads,262,0,150+
+FDR60,Baking Goods,77,0,50-100
+FDS01,Canned,178,0,150+
+FDS02,Dairy,196,0,150+
+FDS03,Meat,64,1,50-100
+FDS04,Frozen Foods,141,0,100-150
+FDS07,Fruits and Vegetables,113,0,100-150
+FDS08,Fruits and Vegetables,178,0,150+
+FDS09,Snack Foods,50,1,<50
+FDS10,Snack Foods,181,0,150+
+FDS11,Breads,224,0,150+
+FDS12,Baking Goods,126,0,100-150
+FDS13,Canned,265,0,150+
+FDS14,Dairy,157,0,150+
+FDS15,Meat,107,0,100-150
+FDS16,Frozen Foods,146,0,100-150
+FDS19,Fruits and Vegetables,76,0,50-100
+FDS20,Fruits and Vegetables,183,0,150+
+FDS21,Snack Foods,63,1,50-100
+FDS22,Snack Foods,45,1,<50
+FDS23,Breads,128,0,100-150
+FDS24,Baking Goods,88,0,50-100
+FDS25,Canned,110,0,100-150
+FDS26,Dairy,261,0,150+
+FDS27,Meat,196,0,150+
+FDS28,Frozen Foods,58,1,50-100
+FDS31,Fruits and Vegetables,179,0,150+
+FDS32,Fruits and Vegetables,141,0,100-150
+FDS33,Snack Foods,89,0,50-100
+FDS34,Snack Foods,113,0,100-150
+FDS35,Breads,65,1,50-100
+FDS36,Baking Goods,110,0,100-150
+FDS37,Canned,116,0,100-150
+FDS39,Meat,144,0,100-150
+FDS40,Frozen Foods,37,1,<50
+FDS43,Fruits and Vegetables,187,0,150+
+FDS44,Fruits and Vegetables,240,0,150+
+FDS45,Snack Foods,107,0,100-150
+FDS46,Snack Foods,119,0,100-150
+FDS47,Breads,88,0,50-100
+FDS48,Baking Goods,150,0,100-150
+FDS49,Canned,79,0,50-100
+FDS50,Dairy,220,0,150+
+FDS51,Meat,62,1,50-100
+FDS52,Frozen Foods,101,0,100-150
+FDS55,Fruits and Vegetables,148,0,100-150
+FDS56,Fruits and Vegetables,263,0,150+
+FDS57,Snack Foods,143,0,100-150
+FDS58,Snack Foods,160,0,150+
+FDS59,Breads,110,0,100-150
+FDS60,Baking Goods,179,0,150+
+FDT01,Canned,212,0,150+
+FDT02,Dairy,35,1,<50
+FDT03,Meat,184,0,150+
+FDT04,Frozen Foods,40,1,<50
+FDT07,Fruits and Vegetables,256,0,150+
+FDT08,Fruits and Vegetables,150,0,100-150
+FDT09,Snack Foods,131,0,100-150
+FDT10,Snack Foods,59,1,50-100
+FDT11,Breads,188,0,150+
+FDT12,Baking Goods,226,0,150+
+FDT13,Canned,188,0,150+
+FDT14,Dairy,121,0,100-150
+FDT15,Meat,183,0,150+
+FDT16,Frozen Foods,261,0,150+
+FDT19,Fruits and Vegetables,173,0,150+
+FDT20,Fruits and Vegetables,39,1,<50
+FDT21,Snack Foods,249,0,150+
+FDT22,Snack Foods,59,1,50-100
+FDT23,Breads,78,0,50-100
+FDT24,Baking Goods,78,0,50-100
+FDT25,Canned,122,0,100-150
+FDT26,Dairy,120,0,100-150
+FDT27,Meat,234,0,150+
+FDT28,Frozen Foods,151,0,150+
+FDT31,Fruits and Vegetables,189,0,150+
+FDT32,Fruits and Vegetables,188,0,150+
+FDT33,Snack Foods,167,0,150+
+FDT34,Snack Foods,106,0,100-150
+FDT35,Breads,168,0,150+
+FDT36,Baking Goods,36,1,<50
+FDT37,Canned,255,0,150+
+FDT38,Dairy,84,0,50-100
+FDT39,Meat,151,0,150+
+FDT40,Frozen Foods,127,0,100-150
+FDT43,Fruits and Vegetables,51,1,50-100
+FDT44,Fruits and Vegetables,117,0,100-150
+FDT45,Snack Foods,54,1,50-100
+FDT46,Snack Foods,51,1,50-100
+FDT47,Breads,96,0,50-100
+FDT48,Baking Goods,198,0,150+
+FDT49,Canned,106,0,100-150
+FDT50,Dairy,97,0,50-100
+FDT51,Meat,111,0,100-150
+FDT52,Frozen Foods,245,0,150+
+FDT55,Fruits and Vegetables,157,0,150+
+FDT56,Fruits and Vegetables,57,1,50-100
+FDT57,Snack Foods,237,0,150+
+FDT58,Snack Foods,169,0,150+
+FDT59,Breads,230,0,150+
+FDT60,Baking Goods,124,0,100-150
+FDU01,Canned,185,0,150+
+FDU02,Dairy,230,0,150+
+FDU03,Meat,183,0,150+
+FDU04,Frozen Foods,122,0,100-150
+FDU07,Fruits and Vegetables,151,0,150+
+FDU08,Fruits and Vegetables,100,0,50-100
+FDU09,Snack Foods,55,1,50-100
+FDU10,Snack Foods,38,1,<50
+FDU11,Breads,120,0,100-150
+FDU12,Baking Goods,263,0,150+
+FDU13,Canned,147,0,100-150
+FDU14,Dairy,249,0,150+
+FDU15,Meat,37,1,<50
+FDU16,Frozen Foods,83,0,50-100
+FDU19,Fruits and Vegetables,172,0,150+
+FDU20,Fruits and Vegetables,121,0,100-150
+FDU21,Snack Foods,34,1,<50
+FDU22,Snack Foods,119,0,100-150
+FDU23,Breads,165,0,150+
+FDU24,Baking Goods,94,0,50-100
+FDU25,Canned,58,1,50-100
+FDU26,Dairy,120,0,100-150
+FDU27,Meat,48,1,<50
+FDU28,Frozen Foods,189,0,150+
+FDU31,Fruits and Vegetables,218,0,150+
+FDU32,Fruits and Vegetables,121,0,100-150
+FDU33,Snack Foods,46,1,<50
+FDU34,Snack Foods,125,0,100-150
+FDU35,Breads,99,0,50-100
+FDU36,Baking Goods,99,0,50-100
+FDU37,Canned,79,0,50-100
+FDU38,Dairy,192,0,150+
+FDU39,Meat,59,1,50-100
+FDU40,Frozen Foods,193,0,150+
+FDU43,Fruits and Vegetables,238,0,150+
+FDU44,Fruits and Vegetables,163,0,150+
+FDU45,Snack Foods,113,0,100-150
+FDU46,Snack Foods,87,0,50-100
+FDU47,Breads,141,0,100-150
+FDU48,Baking Goods,132,0,100-150
+FDU49,Canned,86,0,50-100
+FDU50,Dairy,114,0,100-150
+FDU51,Meat,177,0,150+
+FDU52,Frozen Foods,157,0,150+
+FDU55,Fruits and Vegetables,260,0,150+
+FDU56,Fruits and Vegetables,184,0,150+
+FDU57,Snack Foods,150,0,100-150
+FDU58,Snack Foods,188,0,150+
+FDU59,Breads,163,0,150+
+FDU60,Baking Goods,169,0,150+
+FDV01,Canned,154,0,150+
+FDV02,Dairy,171,0,150+
+FDV03,Meat,155,0,150+
+FDV04,Frozen Foods,158,0,150+
+FDV07,Fruits and Vegetables,111,0,100-150
+FDV08,Fruits and Vegetables,41,1,<50
+FDV09,Snack Foods,148,0,100-150
+FDV10,Snack Foods,42,1,<50
+FDV11,Breads,174,0,150+
+FDV12,Baking Goods,99,0,50-100
+FDV13,Canned,88,0,50-100
+FDV14,Dairy,89,0,50-100
+FDV15,Meat,104,0,100-150
+FDV16,Frozen Foods,35,1,<50
+FDV19,Fruits and Vegetables,161,0,150+
+FDV20,Fruits and Vegetables,127,0,100-150
+FDV21,Snack Foods,125,0,100-150
+FDV22,Snack Foods,157,0,150+
+FDV23,Breads,125,0,100-150
+FDV24,Baking Goods,149,0,100-150
+FDV25,Canned,222,0,150+
+FDV26,Dairy,195,0,150+
+FDV27,Meat,89,0,50-100
+FDV28,Frozen Foods,34,1,<50
+FDV31,Fruits and Vegetables,176,0,150+
+FDV32,Fruits and Vegetables,63,1,50-100
+FDV33,Snack Foods,258,0,150+
+FDV34,Snack Foods,74,1,50-100
+FDV35,Breads,156,0,150+
+FDV36,Baking Goods,126,0,100-150
+FDV37,Canned,197,0,150+
+FDV38,Dairy,55,1,50-100
+FDV39,Meat,197,0,150+
+FDV40,Frozen Foods,74,1,50-100
+FDV43,Fruits and Vegetables,45,1,<50
+FDV44,Fruits and Vegetables,191,0,150+
+FDV45,Snack Foods,188,0,150+
+FDV46,Snack Foods,141,0,100-150
+FDV47,Breads,85,0,50-100
+FDV48,Baking Goods,78,0,50-100
+FDV49,Canned,264,0,150+
+FDV50,Dairy,123,0,100-150
+FDV51,Meat,165,0,150+
+FDV52,Frozen Foods,119,0,100-150
+FDV55,Fruits and Vegetables,145,0,100-150
+FDV56,Fruits and Vegetables,108,0,100-150
+FDV57,Snack Foods,179,0,150+
+FDV58,Snack Foods,196,0,150+
+FDV59,Breads,218,0,150+
+FDV60,Baking Goods,196,0,150+
+FDW01,Canned,154,0,150+
+FDW02,Dairy,126,0,100-150
+FDW03,Meat,105,0,100-150
+FDW04,Frozen Foods,130,0,100-150
+FDW07,Fruits and Vegetables,89,0,50-100
+FDW08,Fruits and Vegetables,106,0,100-150
+FDW09,Snack Foods,80,0,50-100
+FDW10,Snack Foods,175,0,150+
+FDW11,Breads,61,1,50-100
+FDW12,Baking Goods,145,0,100-150
+FDW13,Canned,51,1,50-100
+FDW14,Dairy,88,0,50-100
+FDW15,Meat,148,0,100-150
+FDW16,Frozen Foods,93,0,50-100
+FDW19,Fruits and Vegetables,110,0,100-150
+FDW20,Fruits and Vegetables,124,0,100-150
+FDW21,Snack Foods,101,0,100-150
+FDW22,Snack Foods,222,0,150+
+FDW23,Baking Goods,38,1,<50
+FDW24,Baking Goods,49,1,<50
+FDW25,Canned,85,0,50-100
+FDW26,Dairy,222,0,150+
+FDW27,Meat,155,0,150+
+FDW28,Frozen Foods,196,0,150+
+FDW31,Fruits and Vegetables,199,0,150+
+FDW32,Fruits and Vegetables,86,0,50-100
+FDW33,Snack Foods,106,0,100-150
+FDW34,Snack Foods,244,0,150+
+FDW35,Breads,42,1,<50
+FDW36,Baking Goods,107,0,100-150
+FDW37,Canned,90,0,50-100
+FDW38,Dairy,55,1,50-100
+FDW39,Meat,176,0,150+
+FDW40,Frozen Foods,143,0,100-150
+FDW43,Fruits and Vegetables,226,0,150+
+FDW44,Fruits and Vegetables,170,0,150+
+FDW45,Snack Foods,147,0,100-150
+FDW46,Snack Foods,65,1,50-100
+FDW47,Breads,122,0,100-150
+FDW48,Baking Goods,80,0,50-100
+FDW49,Canned,179,0,150+
+FDW50,Dairy,167,0,150+
+FDW51,Meat,214,0,150+
+FDW52,Frozen Foods,164,0,150+
+FDW55,Fruits and Vegetables,249,0,150+
+FDW56,Fruits and Vegetables,192,0,150+
+FDW57,Snack Foods,177,0,150+
+FDW58,Snack Foods,106,0,100-150
+FDW59,Breads,85,0,50-100
+FDW60,Baking Goods,177,0,150+
+FDX01,Canned,116,0,100-150
+FDX02,Dairy,225,0,150+
+FDX03,Meat,46,1,<50
+FDX04,Frozen Foods,48,1,<50
+FDX07,Fruits and Vegetables,183,0,150+
+FDX08,Fruits and Vegetables,180,0,150+
+FDX09,Snack Foods,176,0,150+
+FDX10,Snack Foods,35,1,<50
+FDX11,Baking Goods,182,0,150+
+FDX12,Baking Goods,241,0,150+
+FDX13,Canned,249,0,150+
+FDX14,Dairy,75,0,50-100
+FDX15,Meat,161,0,150+
+FDX16,Frozen Foods,149,0,100-150
+FDX19,Fruits and Vegetables,234,0,150+
+FDX20,Fruits and Vegetables,227,0,150+
+FDX21,Snack Foods,109,0,100-150
+FDX22,Snack Foods,210,0,150+
+FDX23,Baking Goods,95,0,50-100
+FDX24,Baking Goods,94,0,50-100
+FDX25,Canned,182,0,150+
+FDX26,Dairy,182,0,150+
+FDX27,Dairy,94,0,50-100
+FDX28,Frozen Foods,100,0,50-100
+FDX31,Fruits and Vegetables,234,0,150+
+FDX32,Fruits and Vegetables,144,0,100-150
+FDX33,Snack Foods,160,0,150+
+FDX34,Snack Foods,121,0,100-150
+FDX35,Breads,228,0,150+
+FDX36,Baking Goods,225,0,150+
+FDX37,Canned,100,0,50-100
+FDX38,Dairy,48,1,<50
+FDX39,Meat,211,0,150+
+FDX40,Frozen Foods,39,1,<50
+FDX43,Fruits and Vegetables,166,0,150+
+FDX44,Fruits and Vegetables,89,0,50-100
+FDX45,Snack Foods,156,0,150+
+FDX46,Snack Foods,58,1,50-100
+FDX47,Breads,157,0,150+
+FDX48,Baking Goods,154,0,150+
+FDX49,Canned,232,0,150+
+FDX50,Dairy,110,0,100-150
+FDX51,Meat,195,0,150+
+FDX52,Frozen Foods,194,0,150+
+FDX55,Fruits and Vegetables,217,0,150+
+FDX56,Fruits and Vegetables,207,0,150+
+FDX57,Snack Foods,97,0,50-100
+FDX58,Snack Foods,183,0,150+
+FDX59,Breads,34,1,<50
+FDX60,Baking Goods,80,0,50-100
+FDY01,Canned,116,0,100-150
+FDY02,Dairy,263,0,150+
+FDY03,Meat,112,0,100-150
+FDY04,Frozen Foods,163,0,150+
+FDY07,Fruits and Vegetables,46,1,<50
+FDY08,Fruits and Vegetables,140,0,100-150
+FDY09,Snack Foods,174,0,150+
+FDY10,Snack Foods,114,0,100-150
+FDY11,Baking Goods,66,1,50-100
+FDY12,Baking Goods,50,1,<50
+FDY13,Canned,76,0,50-100
+FDY14,Dairy,264,0,150+
+FDY15,Dairy,156,0,150+
+FDY16,Frozen Foods,184,0,150+
+FDY19,Fruits and Vegetables,117,0,100-150
+FDY20,Fruits and Vegetables,91,0,50-100
+FDY21,Snack Foods,196,0,150+
+FDY22,Snack Foods,144,0,100-150
+FDY24,Baking Goods,53,1,50-100
+FDY25,Canned,181,0,150+
+FDY26,Dairy,212,0,150+
+FDY27,Dairy,178,0,150+
+FDY28,Frozen Foods,214,0,150+
+FDY31,Fruits and Vegetables,147,0,100-150
+FDY32,Fruits and Vegetables,164,0,150+
+FDY33,Snack Foods,159,0,150+
+FDY34,Snack Foods,166,0,150+
+FDY35,Breads,46,1,<50
+FDY36,Baking Goods,74,1,50-100
+FDY37,Canned,143,0,100-150
+FDY38,Dairy,232,0,150+
+FDY39,Meat,183,0,150+
+FDY40,Frozen Foods,50,1,<50
+FDY43,Fruits and Vegetables,170,0,150+
+FDY44,Fruits and Vegetables,196,0,150+
+FDY45,Snack Foods,254,0,150+
+FDY46,Snack Foods,187,0,150+
+FDY47,Breads,130,0,100-150
+FDY48,Baking Goods,104,0,100-150
+FDY49,Canned,165,0,150+
+FDY50,Dairy,89,0,50-100
+FDY51,Meat,221,0,150+
+FDY52,Frozen Foods,61,1,50-100
+FDY55,Fruits and Vegetables,257,0,150+
+FDY56,Fruits and Vegetables,226,0,150+
+FDY57,Snack Foods,96,0,50-100
+FDY58,Snack Foods,228,0,150+
+FDY59,Baking Goods,93,0,50-100
+FDY60,Baking Goods,144,0,100-150
+FDZ01,Canned,103,0,100-150
+FDZ02,Dairy,98,0,50-100
+FDZ03,Dairy,186,0,150+
+FDZ04,Frozen Foods,63,1,50-100
+FDZ07,Fruits and Vegetables,62,1,50-100
+FDZ08,Fruits and Vegetables,82,0,50-100
+FDZ09,Snack Foods,164,0,150+
+FDZ10,Snack Foods,127,0,100-150
+FDZ12,Baking Goods,144,0,100-150
+FDZ13,Canned,51,1,50-100
+FDZ14,Dairy,122,0,100-150
+FDZ15,Dairy,118,0,100-150
+FDZ16,Frozen Foods,194,0,150+
+FDZ19,Fruits and Vegetables,176,0,150+
+FDZ20,Fruits and Vegetables,254,0,150+
+FDZ21,Snack Foods,96,0,50-100
+FDZ22,Snack Foods,84,0,50-100
+FDZ23,Baking Goods,186,0,150+
+FDZ25,Canned,170,0,150+
+FDZ26,Dairy,239,0,150+
+FDZ27,Dairy,51,1,50-100
+FDZ28,Frozen Foods,127,0,100-150
+FDZ31,Fruits and Vegetables,191,0,150+
+FDZ32,Fruits and Vegetables,105,0,100-150
+FDZ33,Snack Foods,148,0,100-150
+FDZ34,Starchy Foods,193,0,150+
+FDZ35,Breads,103,0,100-150
+FDZ36,Baking Goods,187,0,150+
+FDZ37,Canned,88,0,50-100
+FDZ38,Dairy,173,0,150+
+FDZ39,Meat,103,0,100-150
+FDZ40,Frozen Foods,54,1,50-100
+FDZ43,Fruits and Vegetables,242,0,150+
+FDZ44,Fruits and Vegetables,116,0,100-150
+FDZ45,Snack Foods,198,0,150+
+FDZ46,Snack Foods,110,0,100-150
+FDZ47,Baking Goods,99,0,50-100
+FDZ48,Baking Goods,112,0,100-150
+FDZ49,Canned,220,0,150+
+FDZ50,Dairy,183,0,150+
+FDZ51,Meat,96,0,50-100
+FDZ52,Frozen Foods,112,0,100-150
+FDZ55,Fruits and Vegetables,160,0,150+
+FDZ56,Fruits and Vegetables,168,0,150+
+FDZ57,Snack Foods,128,0,100-150
+FDZ58,Snack Foods,122,0,100-150
+FDZ59,Baking Goods,166,0,150+
+FDZ60,Baking Goods,108,0,100-150
+NCA05,Health and Hygiene,149,0,100-150
+NCA06,Household,36,1,<50
+NCA17,Health and Hygiene,149,0,100-150
+NCA18,Household,116,0,100-150
+NCA29,Household,171,0,150+
+NCA30,Household,190,0,150+
+NCA41,Health and Hygiene,192,0,150+
+NCA42,Household,159,0,150+
+NCA53,Health and Hygiene,48,1,<50
+NCA54,Household,180,0,150+
+NCB06,Health and Hygiene,161,0,150+
+NCB07,Household,197,0,150+
+NCB18,Household,89,0,50-100
+NCB19,Household,86,0,50-100
+NCB30,Household,198,0,150+
+NCB31,Household,263,0,150+
+NCB42,Health and Hygiene,116,0,100-150
+NCB43,Household,188,0,150+
+NCB54,Health and Hygiene,127,0,100-150
+NCB55,Household,59,1,50-100
+NCC06,Household,128,0,100-150
+NCC07,Household,105,0,100-150
+NCC18,Household,173,0,150+
+NCC19,Household,193,0,150+
+NCC30,Household,177,0,150+
+NCC31,Household,156,0,150+
+NCC42,Health and Hygiene,141,0,100-150
+NCC43,Household,251,0,150+
+NCC54,Health and Hygiene,241,0,150+
+NCC55,Household,36,1,<50
+NCD06,Household,46,1,<50
+NCD07,Household,114,0,100-150
+NCD18,Household,230,0,150+
+NCD19,Household,55,1,50-100
+NCD30,Household,98,0,50-100
+NCD31,Household,165,0,150+
+NCD42,Health and Hygiene,38,1,<50
+NCD43,Household,106,0,100-150
+NCD54,Household,145,0,100-150
+NCD55,Household,42,1,<50
+NCE06,Household,161,0,150+
+NCE07,Household,142,0,100-150
+NCE18,Household,249,0,150+
+NCE19,Household,54,1,50-100
+NCE30,Household,212,0,150+
+NCE31,Household,34,1,<50
+NCE42,Household,234,0,150+
+NCE43,Household,171,0,150+
+NCE54,Household,75,0,50-100
+NCE55,Household,177,0,150+
+NCF06,Household,259,0,150+
+NCF07,Household,101,0,100-150
+NCF18,Household,192,0,150+
+NCF19,Household,48,1,<50
+NCF30,Household,125,0,100-150
+NCF31,Household,152,0,150+
+NCF42,Household,176,0,150+
+NCF43,Household,142,0,100-150
+NCF54,Household,171,0,150+
+NCF55,Household,35,1,<50
+NCG06,Household,257,0,150+
+NCG07,Household,190,0,150+
+NCG18,Household,103,0,100-150
+NCG19,Household,234,0,150+
+NCG30,Household,124,0,100-150
+NCG42,Household,130,0,100-150
+NCG43,Household,93,0,50-100
+NCG54,Household,172,0,150+
+NCG55,Household,116,0,100-150
+NCH06,Household,247,0,150+
+NCH07,Household,159,0,150+
+NCH18,Household,246,0,150+
+NCH29,Health and Hygiene,98,0,50-100
+NCH30,Household,114,0,100-150
+NCH42,Household,230,0,150+
+NCH43,Household,216,0,150+
+NCH54,Household,160,0,150+
+NCH55,Household,127,0,100-150
+NCI06,Household,180,0,150+
+NCI17,Health and Hygiene,96,0,50-100
+NCI18,Household,224,0,150+
+NCI29,Health and Hygiene,142,0,100-150
+NCI30,Household,246,0,150+
+NCI31,Others,37,1,<50
+NCI42,Household,208,0,150+
+NCI43,Household,48,1,<50
+NCI54,Household,109,0,100-150
+NCI55,Household,122,0,100-150
+NCJ05,Health and Hygiene,153,0,150+
+NCJ06,Household,120,0,100-150
+NCJ17,Health and Hygiene,85,0,50-100
+NCJ18,Household,118,0,100-150
+NCJ19,Others,57,1,50-100
+NCJ29,Health and Hygiene,85,0,50-100
+NCJ30,Household,170,0,150+
+NCJ31,Others,242,0,150+
+NCJ42,Household,102,0,100-150
+NCJ43,Household,174,0,150+
+NCJ54,Household,232,0,150+
+NCK05,Health and Hygiene,61,1,50-100
+NCK06,Household,122,0,100-150
+NCK07,Others,165,0,150+
+NCK17,Health and Hygiene,40,1,<50
+NCK18,Household,165,0,150+
+NCK19,Others,194,0,150+
+NCK29,Health and Hygiene,123,0,100-150
+NCK30,Household,254,0,150+
+NCK31,Others,51,1,50-100
+NCK42,Household,216,0,150+
+NCK53,Health and Hygiene,100,0,50-100
+NCK54,Household,116,0,100-150
+NCL05,Health and Hygiene,44,1,<50
+NCL06,Household,262,0,150+
+NCL07,Others,40,1,<50
+NCL17,Health and Hygiene,141,0,100-150
+NCL18,Household,194,0,150+
+NCL19,Others,144,0,100-150
+NCL29,Health and Hygiene,158,0,150+
+NCL30,Household,127,0,100-150
+NCL31,Others,143,0,100-150
+NCL41,Health and Hygiene,35,1,<50
+NCL42,Household,245,0,150+
+NCL53,Health and Hygiene,176,0,150+
+NCL54,Household,176,0,150+
+NCL55,Others,254,0,150+
+NCM05,Health and Hygiene,264,0,150+
+NCM06,Household,155,0,150+
+NCM07,Others,84,0,50-100
+NCM17,Health and Hygiene,45,1,<50
+NCM18,Household,61,1,50-100
+NCM19,Others,113,0,100-150
+NCM26,Others,154,0,150+
+NCM29,Health and Hygiene,131,0,100-150
+NCM30,Household,41,1,<50
+NCM31,Others,142,0,100-150
+NCM41,Health and Hygiene,94,0,50-100
+NCM42,Household,110,0,100-150
+NCM43,Others,163,0,150+
+NCM53,Health and Hygiene,106,0,100-150
+NCM54,Household,127,0,100-150
+NCM55,Others,185,0,150+
+NCN05,Health and Hygiene,183,0,150+
+NCN06,Household,164,0,150+
+NCN07,Others,131,0,100-150
+NCN14,Others,184,0,150+
+NCN17,Health and Hygiene,101,0,100-150
+NCN18,Household,113,0,100-150
+NCN19,Others,190,0,150+
+NCN26,Household,117,0,100-150
+NCN29,Health and Hygiene,49,1,<50
+NCN30,Household,97,0,50-100
+NCN41,Health and Hygiene,124,0,100-150
+NCN42,Household,147,0,100-150
+NCN43,Others,123,0,100-150
+NCN53,Health and Hygiene,35,1,<50
+NCN54,Household,77,0,50-100
+NCN55,Others,240,0,150+
+NCO02,Others,66,1,50-100
+NCO05,Health and Hygiene,99,0,50-100
+NCO06,Household,34,1,<50
+NCO07,Others,213,0,150+
+NCO14,Household,44,1,<50
+NCO17,Health and Hygiene,120,0,100-150
+NCO18,Household,178,0,150+
+NCO26,Household,117,0,100-150
+NCO29,Health and Hygiene,164,0,150+
+NCO30,Household,184,0,150+
+NCO41,Health and Hygiene,98,0,50-100
+NCO42,Household,146,0,100-150
+NCO43,Others,101,0,100-150
+NCO53,Health and Hygiene,184,0,150+
+NCO54,Household,56,1,50-100
+NCO55,Others,107,0,100-150
+NCP02,Household,60,1,50-100
+NCP05,Health and Hygiene,152,0,150+
+NCP06,Household,151,0,150+
+NCP14,Household,105,0,100-150
+NCP17,Health and Hygiene,64,1,50-100
+NCP18,Household,150,0,100-150
+NCP29,Health and Hygiene,65,1,50-100
+NCP30,Household,39,1,<50
+NCP41,Health and Hygiene,109,0,100-150
+NCP42,Household,195,0,150+
+NCP43,Others,180,0,150+
+NCP50,Others,80,0,50-100
+NCP53,Health and Hygiene,237,0,150+
+NCP54,Household,124,0,100-150
+NCP55,Others,56,1,50-100
+NCQ02,Household,187,0,150+
+NCQ05,Health and Hygiene,151,0,150+
+NCQ06,Household,255,0,150+
+NCQ17,Health and Hygiene,156,0,150+
+NCQ18,Household,100,0,50-100
+NCQ29,Health and Hygiene,260,0,150+
+NCQ30,Household,123,0,100-150
+NCQ38,Others,106,0,100-150
+NCQ41,Health and Hygiene,194,0,150+
+NCQ42,Household,127,0,100-150
+NCQ43,Others,109,0,100-150
+NCQ50,Household,214,0,150+
+NCQ53,Health and Hygiene,237,0,150+
+NCQ54,Household,168,0,150+
+NCR05,Health and Hygiene,199,0,150+
+NCR06,Household,42,1,<50
+NCR17,Health and Hygiene,115,0,100-150
+NCR18,Household,43,1,<50
+NCR29,Health and Hygiene,57,1,50-100
+NCR30,Household,75,0,50-100
+NCR38,Household,253,0,150+
+NCR41,Health and Hygiene,96,0,50-100
+NCR42,Household,34,1,<50
+NCR50,Household,154,0,150+
+NCR53,Health and Hygiene,225,0,150+
+NCR54,Household,197,0,150+
+NCS05,Health and Hygiene,132,0,100-150
+NCS06,Household,262,0,150+
+NCS17,Health and Hygiene,94,0,50-100
+NCS18,Household,108,0,100-150
+NCS29,Health and Hygiene,265,0,150+
+NCS30,Household,128,0,100-150
+NCS38,Household,114,0,100-150
+NCS41,Health and Hygiene,184,0,150+
+NCS42,Household,92,0,50-100
+NCS53,Health and Hygiene,159,0,150+
+NCS54,Household,177,0,150+
+NCT05,Health and Hygiene,256,0,150+
+NCT06,Household,167,0,150+
+NCT17,Health and Hygiene,189,0,150+
+NCT18,Household,181,0,150+
+NCT29,Health and Hygiene,123,0,100-150
+NCT30,Household,48,1,<50
+NCT41,Health and Hygiene,152,0,150+
+NCT42,Household,149,0,100-150
+NCT53,Health and Hygiene,164,0,150+
+NCT54,Household,94,0,50-100
+NCU05,Health and Hygiene,81,0,50-100
+NCU06,Household,229,0,150+
+NCU17,Health and Hygiene,102,0,100-150
+NCU18,Household,140,0,100-150
+NCU29,Health and Hygiene,145,0,100-150
+NCU30,Household,163,0,150+
+NCU41,Health and Hygiene,190,0,150+
+NCU42,Household,169,0,150+
+NCU53,Health and Hygiene,165,0,150+
+NCU54,Household,209,0,150+
+NCV05,Health and Hygiene,153,0,150+
+NCV06,Household,194,0,150+
+NCV17,Health and Hygiene,130,0,100-150
+NCV18,Household,84,0,50-100
+NCV29,Health and Hygiene,177,0,150+
+NCV30,Household,62,1,50-100
+NCV41,Health and Hygiene,110,0,100-150
+NCV42,Household,111,0,100-150
+NCV53,Health and Hygiene,239,0,150+
+NCV54,Household,118,0,100-150
+NCW05,Health and Hygiene,109,0,100-150
+NCW06,Household,192,0,150+
+NCW17,Health and Hygiene,129,0,100-150
+NCW18,Household,238,0,150+
+NCW29,Health and Hygiene,130,0,100-150
+NCW30,Household,259,0,150+
+NCW41,Health and Hygiene,159,0,150+
+NCW42,Household,221,0,150+
+NCW53,Health and Hygiene,193,0,150+
+NCW54,Household,57,1,50-100
+NCX05,Health and Hygiene,116,0,100-150
+NCX06,Household,182,0,150+
+NCX17,Health and Hygiene,232,0,150+
+NCX18,Household,196,0,150+
+NCX29,Health and Hygiene,146,0,100-150
+NCX30,Household,248,0,150+
+NCX41,Health and Hygiene,211,0,150+
+NCX42,Household,164,0,150+
+NCX53,Health and Hygiene,142,0,100-150
+NCX54,Household,106,0,100-150
+NCY05,Health and Hygiene,35,1,<50
+NCY06,Household,131,0,100-150
+NCY17,Health and Hygiene,44,1,<50
+NCY18,Household,175,0,150+
+NCY29,Health and Hygiene,56,1,50-100
+NCY30,Household,181,0,150+
+NCY41,Health and Hygiene,35,1,<50
+NCY42,Household,144,0,100-150
+NCY53,Health and Hygiene,111,0,100-150
+NCY54,Household,172,0,150+
+NCZ05,Health and Hygiene,104,0,100-150
+NCZ06,Household,254,0,150+
+NCZ17,Health and Hygiene,38,1,<50
+NCZ18,Household,254,0,150+
+NCZ29,Health and Hygiene,126,0,100-150
+NCZ30,Household,121,0,100-150
+NCZ41,Health and Hygiene,126,0,100-150
+NCZ42,Household,237,0,150+
+NCZ53,Health and Hygiene,188,0,150+
+NCZ54,Household,162,0,150+

@@ -1,0 +1,7 @@
+Model,Features,tn,fp,fn,tp
+Logistic Regression,Original (18),8466,214,1016,204
+Random Forest,Original (18),8615,65,1123,97
+XGBoost,Original (18),8264,416,934,286
+Logistic Regression,Final (23),8463,217,1021,199
+Random Forest,Final (23),8540,140,1057,163
+XGBoost,Final (23),8258,422,949,271
