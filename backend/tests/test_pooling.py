@@ -1,10 +1,34 @@
 from backend.app.pooling.engine import (
     PolicyConfig,
+    choose_probability_window,
     compatibility_check,
     decide,
     detour_minutes,
     fee_saving,
 )
+
+
+def test_probability_window_reports_chance_but_does_not_recommend_weak_wait():
+    recommended, best, probability = choose_probability_window(
+        {(2, 300): 0.04, (5, 600): 0.08}
+    )
+
+    assert recommended is None
+    assert best == (5, 600)
+    assert probability == 0.08
+
+
+def test_probability_window_recommends_wait_above_sample_base_rate():
+    recommended, best, probability = choose_probability_window(
+        {(2, 300): 0.10, (10, 900): 0.30}
+    )
+
+    assert recommended == best == (10, 900)
+    assert probability == 0.30
+
+
+def test_probability_window_returns_no_best_window_when_model_has_zero_chance():
+    assert choose_probability_window({(2, 300): 0.0}) == (None, None, 0.0)
 
 
 def test_fee_saving_full_waiver():
@@ -52,8 +76,32 @@ def test_wait_pool_dispatch_outcomes():
         focal_user=1,
         focal_value=70,
     )
-    assert pooled.action == "POOL"
-    assert pooled.partner_order_id == 2
+    assert pooled.action == "WAIT"
+
+    pooled_at_limit = decide(
+        elapsed_wait=8,
+        chosen_wait=8,
+        chosen_radius=600,
+        probability=0.9,
+        candidates=[cand],
+        focal_user=1,
+        focal_value=70,
+    )
+    assert pooled_at_limit.action == "POOL"
+    assert pooled_at_limit.partner_order_ids == [2]
+
+    third_candidate = {**cand, "order_id": 3, "user": 9, "waited_minutes": 2}
+    filled_pool = decide(
+        elapsed_wait=2,
+        chosen_wait=8,
+        chosen_radius=600,
+        probability=0.9,
+        candidates=[cand, third_candidate],
+        focal_user=1,
+        focal_value=70,
+    )
+    assert filled_pool.action == "POOL"
+    assert filled_pool.partner_order_ids == [2, 3]
 
     waiting = decide(
         elapsed_wait=2,

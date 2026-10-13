@@ -12,10 +12,12 @@ import { PoolingSimulatorPage } from "./pages/PoolingSimulatorPage";
 import { ModelEvaluationPage } from "./pages/ModelEvaluationPage";
 import { PoolingImpactPage } from "./pages/PoolingImpactPage";
 import { DatasetExplorerPage } from "./pages/DatasetExplorerPage";
+import { AdminLoginPage } from "./pages/AdminLoginPage";
 
 export default function App() {
   return (
     <Routes>
+      <Route path="/admin/login" element={<AdminLoginPage />} />
       <Route element={<CustomerLayout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/cart" element={<CartPage />} />

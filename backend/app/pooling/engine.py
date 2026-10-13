@@ -11,6 +11,7 @@ from typing import Any, Literal
 from backend.app.ml.constants import DETOUR_MIN, FEE, LAM, MAXW, RADII, THRESHOLD, WAITS
 
 Action = Literal["WAIT", "POOL", "DISPATCH"]
+MIN_PROBABILITY_TO_WAIT = 0.1232
 
 
 def fee_saving(order_value: float, partner_value: float, fee: float = FEE, threshold: float = THRESHOLD) -> float:
@@ -36,6 +37,7 @@ class PolicyConfig:
     waits: list[int] = field(default_factory=lambda: list(WAITS))
     radii: list[int] = field(default_factory=lambda: list(RADII.keys()))
     min_probability_to_wait: float = 0.0  # unused by default; notebook is utility-based
+    max_pool_orders: int = 3
 
 
 @dataclass
@@ -55,6 +57,7 @@ class Decision:
     candidates_considered: int
     elapsed_wait: float
     compatibility: list[dict[str, Any]] = field(default_factory=list)
+    partner_order_ids: list[int] = field(default_factory=list)
 
 
 def choose_wait_radius(
@@ -78,6 +81,22 @@ def choose_wait_radius(
                 best_score = score
                 best_j = (w, r)
     return best_j
+
+
+def choose_probability_window(
+    probabilities: dict[tuple[int, int], float],
+    min_probability: float = MIN_PROBABILITY_TO_WAIT,
+) -> tuple[tuple[int, int] | None, tuple[int, int] | None, float]:
+    """Return the best ML window and only recommend waiting above the held-out base rate."""
+    if not probabilities:
+        return None, None, 0.0
+    best_window, best_probability = max(
+        probabilities.items(), key=lambda scenario: (scenario[1], -scenario[0][0], -scenario[0][1])
+    )
+    if best_probability <= 0:
+        return None, None, 0.0
+    recommended = best_window if best_probability >= min_probability else None
+    return recommended, best_window, float(best_probability)
 
 
 def compatibility_check(
@@ -123,7 +142,13 @@ def decide(
     comps = [
         compatibility_check(focal_user, c, chosen_wait or cfg.max_wait, cfg) for c in candidates
     ]
-    feasible = [c for c, k in zip(candidates, comps) if k["feasible"]]
+    feasible = []
+    seen_users = {int(focal_user)}
+    for candidate, check in zip(candidates, comps):
+        candidate_user = int(candidate["user"])
+        if check["feasible"] and candidate_user not in seen_users:
+            feasible.append(candidate)
+            seen_users.add(candidate_user)
 
     if force_dispatch:
         return Decision(
@@ -144,12 +169,18 @@ def decide(
             comps,
         )
 
-    if feasible:
-        partner = feasible[0]
-        dist = int(partner["grid_distance"])
+    if feasible and (
+        chosen_wait is None
+        or len(feasible) >= cfg.max_pool_orders - 1
+        or elapsed_wait >= min(chosen_wait or cfg.max_wait, cfg.max_wait) - 1e-9
+    ):
+        partners = feasible[: max(1, cfg.max_pool_orders - 1)]
+        partner = partners[0]
+        dist = max(int(p["grid_distance"]) for p in partners)
         detour = detour_minutes(dist, cfg.detour_min)
-        sav = fee_saving(focal_value, partner["value"], cfg.fee, cfg.threshold)
-        return Decision(
+        partner_value = sum(float(p["value"]) for p in partners)
+        sav = fee_saving(focal_value, partner_value, cfg.fee, cfg.threshold)
+        decision = Decision(
             "POOL",
             chosen_wait,
             chosen_radius,
@@ -158,11 +189,32 @@ def decide(
             elapsed_wait + detour,
             sav - cfg.lam * (elapsed_wait + detour),
             int(partner["order_id"]),
-            float(partner["value"]),
+            partner_value,
             dist,
             detour,
-            "A later small order from a different user is already in the simulated radius "
-            "and passes wait/detour checks. Probability was not used as proof of a match.",
+            "Compatible orders from different users were observed in the simulated radius. "
+            "The pool closes at its participant cap or chosen wait limit; probability is not proof of a match.",
+            len(candidates),
+            elapsed_wait,
+            comps,
+        )
+        decision.partner_order_ids = [int(p["order_id"]) for p in partners]
+        return decision
+
+    if feasible:
+        return Decision(
+            "WAIT",
+            chosen_wait,
+            chosen_radius,
+            probability,
+            None,
+            None,
+            None,
+            None,
+            None,
+            None,
+            None,
+            "A compatible order has arrived; keeping the pool open for more orders until its cap or chosen wait limit.",
             len(candidates),
             elapsed_wait,
             comps,
@@ -181,7 +233,7 @@ def decide(
             None,
             None,
             None,
-            "Utility policy selected dispatch-now (expected net value of waiting ≤ 0).",
+            "No wait was recommended for this order; dispatching without delay.",
             len(candidates),
             elapsed_wait,
             comps,

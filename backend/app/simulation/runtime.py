@@ -3,8 +3,9 @@
 from __future__ import annotations
 
 import json
+import secrets
 import threading
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Any
 
 import numpy as np
@@ -16,10 +17,17 @@ from backend.app.ml.constants import GRID, MAXW, RADII, THRESHOLD, WAITS
 from backend.app.ml.live_features import EventIndex, causal_candidates
 from backend.app.ml.predict import ModelNotAvailable, predict_from_base
 from backend.app.ml.simulate import build_zones, engineer_row
+from backend.app.order_access import hash_order_access_key
 from backend.app.paths import EVENTS_CSV
-from backend.app.pooling.engine import PolicyConfig, choose_wait_radius, decide, fee_saving
+from backend.app.pooling.engine import (
+    PolicyConfig,
+    choose_probability_window,
+    decide,
+    fee_saving,
+)
 
 CUSTOMER_ID_BASE = 900_000
+DEFAULT_CHECKOUT_CELL = 44
 
 
 class SimulationRuntime:
@@ -40,6 +48,7 @@ class SimulationRuntime:
             self.events = events_df.sort_values("t").reset_index(drop=True)
         else:
             self._load_events()
+        self.forecast_history = EventIndex.from_events(self.events)
         self.reset(persist_customers=True, start_day=start_day)
 
     def _load_events(self) -> None:
@@ -263,13 +272,10 @@ class SimulationRuntime:
                     row, pred = predict_from_base(features, w, r)
                     probs[(w, r)] = pred["probability"]
                     self._save_prediction(oid, w, r, pred, row)
-            est_saving = float(min(cfg.fee, cfg.fee * max(order["value"], 1) / max(order["value"] + 80, 1)))
-            chosen = choose_wait_radius(probs, order["value"], est_saving, self.mean_delay, cfg)
-            if chosen:
-                best_p = probs[chosen]
+            chosen, _, best_p = choose_probability_window(probs)
         except ModelNotAvailable as exc:
             order["model_error"] = str(exc)
-            chosen = (8, 600)
+            chosen = None
             best_p = None
 
         order["wait_minutes"], order["radius_m"] = (chosen if chosen else (None, None))
@@ -311,7 +317,11 @@ class SimulationRuntime:
                 int(order.get("wait_minutes") or MAXW),
                 self.clock,
             )
-            cands = [c for c in cands if c["order_id"] != order["order_id"]]
+            cands = [
+                c for c in cands
+                if c["order_id"] != order["order_id"]
+                and self.orders.get(c["order_id"], {}).get("status") == "waiting"
+            ]
             d = decide(
                 elapsed_wait=elapsed,
                 chosen_wait=order.get("wait_minutes"),
@@ -326,19 +336,25 @@ class SimulationRuntime:
                 order["status"] = "pooled"
                 order["decision"] = "POOL"
                 order["partner_order_id"] = d.partner_order_id
+                order["partner_order_ids"] = d.partner_order_ids
                 order["reason"] = d.reason
                 order["saving"] = d.expected_saving
                 order["delay"] = d.expected_delay
                 self._note(order, "pooled", d.reason)
                 self._note(order, "dispatched", "Pooled pair released for simulated dispatch")
                 order["status"] = "dispatched"
-                partner = self.orders.get(d.partner_order_id)
-                if partner and partner.get("status") in ("waiting", "evaluating", "placed"):
+                for partner_id in d.partner_order_ids:
+                    partner = self.orders.get(partner_id)
+                    if not partner or partner.get("status") not in ("waiting", "evaluating", "placed"):
+                        continue
                     partner["status"] = "dispatched"
                     partner["decision"] = "POOL"
                     partner["partner_order_id"] = order["order_id"]
-                    self._note(partner, "pooled", "Matched as pooling partner")
-                    self._note(partner, "dispatched", "Pooled pair released for simulated dispatch")
+                    partner["partner_order_ids"] = [order["order_id"]] + [
+                        other_id for other_id in d.partner_order_ids if other_id != partner_id
+                    ]
+                    self._note(partner, "pooled", "Matched into a shared delivery pool")
+                    self._note(partner, "dispatched", "Shared pool released for simulated dispatch")
                     self._save_order(partner)
                     self._save_decision(partner, d)
                 self._save_order(order)
@@ -372,6 +388,7 @@ class SimulationRuntime:
         customer_name: str = "Guest",
     ) -> dict[str, Any]:
         with self.lock:
+            access_key = secrets.token_urlsafe(32)
             value = int(sum(int(i["unit_price"]) * int(i["quantity"]) for i in items))
             n_items = int(sum(int(i["quantity"]) for i in items))
             t = float(self.clock) if self.clock else (
@@ -379,11 +396,26 @@ class SimulationRuntime:
             )
             day = int(t // 1440)
             hour = int((t % 1440) // 60)
-            oid = CUSTOMER_ID_BASE + len([o for o in self.orders.values() if o.get("source") == "checkout"]) + 1
+            with get_conn() as conn:
+                latest_saved = int(
+                    conn.execute(
+                        "SELECT COALESCE(MAX(order_id), ?) FROM app_orders WHERE source='checkout'",
+                        (CUSTOMER_ID_BASE,),
+                    ).fetchone()[0]
+                )
+            latest_memory = max(
+                (
+                    int(o["order_id"])
+                    for o in self.orders.values()
+                    if o.get("source") == "checkout"
+                ),
+                default=CUSTOMER_ID_BASE,
+            )
+            oid = max(CUSTOMER_ID_BASE, latest_saved, latest_memory) + 1
             order = {
                 "order_id": oid,
                 "source": "checkout",
-                "user_id": 999999,
+                "user_id": oid,
                 "cell": int(cell),
                 "t": t + 0.001,
                 "day": day,
@@ -395,6 +427,8 @@ class SimulationRuntime:
                 "status": "placed",
                 "customer_name": customer_name,
                 "items": items,
+                "access_key_hash": hash_order_access_key(access_key),
+                "_access_key": access_key,
                 "placed_wallclock": datetime.now(timezone.utc).isoformat(),
                 "ingested": False,
             }
@@ -410,6 +444,151 @@ class SimulationRuntime:
                     )
             self._note(order, "placed", "Simulated checkout (no payment collected)")
             return order
+
+    def estimate_checkout(
+        self, value: int, n_items: int, cell: int = DEFAULT_CHECKOUT_CELL
+    ) -> dict[str, Any]:
+        with self.lock:
+            if not 0 <= cell < GRID * GRID:
+                raise ValueError("cell must be between 0 and 99")
+            now = datetime.now().astimezone()
+            eligible_days = sorted(
+                {
+                    int(day)
+                    for day in self.events.get("day", [])
+                    if int(day) >= 7 and int(day) % 7 == now.weekday()
+                }
+            )
+            if eligible_days:
+                day = eligible_days[-1]
+                hour = now.hour
+                t = day * 1440 + hour * 60 + now.minute
+                history = self.forecast_history
+            else:
+                t = self.clock or (
+                    float(self.events.iloc[self.event_index].t)
+                    if self.event_index < len(self.events)
+                    else 0.0
+                )
+                day = int(t // 1440)
+                hour = int((t % 1440) // 60)
+                now = now.replace(hour=hour, minute=int(t % 60))
+                history = self.live
+            order = {
+                "order_id": CUSTOMER_ID_BASE,
+                "user_id": CUSTOMER_ID_BASE,
+                "cell": cell,
+                "t": t + 0.001,
+                "day": day,
+                "hour": hour,
+                "dow": now.weekday() if eligible_days else day % 7,
+                "value": value,
+                "n_items": n_items,
+                "small": int(value < THRESHOLD),
+            }
+            features = history.features_before(_Row(order), self.zone)
+            recent_cutoff = (datetime.now(timezone.utc) - timedelta(minutes=15)).isoformat()
+            with get_conn() as conn:
+                recent_orders = conn.execute(
+                    """
+                    SELECT user_id, cell, small
+                    FROM app_orders
+                    WHERE source='checkout' AND placed_wallclock >= ?
+                    """,
+                    (recent_cutoff,),
+                ).fetchall()
+            live_users: dict[int, set[int]] = {
+                radius: set() for radius in RADII
+            }
+            live_cell_users: set[int] = set()
+            has_nearby_live_activity = False
+            for recent in recent_orders:
+                recent_cell = int(recent["cell"])
+                distance = max(
+                    abs(recent_cell // GRID - cell // GRID),
+                    abs(recent_cell % GRID - cell % GRID),
+                )
+                if distance <= max(RADII.values()):
+                    has_nearby_live_activity = True
+                if distance == 0:
+                    live_cell_users.add(int(recent["user_id"]))
+                for radius, max_distance in RADII.items():
+                    if int(recent["small"]) and distance <= max_distance:
+                        live_users[radius].add(int(recent["user_id"]))
+            if has_nearby_live_activity:
+                features["orders_in_cell_last_15min"] = len(live_cell_users)
+                for radius in RADII:
+                    if radius in (600, 900):
+                        features[f"small_orders_{radius}m_last_15min"] = len(
+                            live_users[radius]
+                        )
+
+            small_orders = self.events[self.events.get("small", 0) == 1]
+            if not small_orders.empty and "hour" in small_orders:
+                by_hour = small_orders.groupby("hour").size().reindex(range(7, 23), fill_value=0)
+                typical_hour = float(by_hour.mean())
+                if typical_hour and hour in by_hour.index:
+                    demand_index = float(by_hour.loc[hour] / typical_hour)
+                    demand_change = round((demand_index - 1) * 100)
+                else:
+                    demand_index = 0.0
+                    demand_change = None
+            else:
+                demand_index = 0.0
+                demand_change = None
+
+            daypart = (
+                "morning" if 7 <= hour < 11 else
+                "lunchtime" if 11 <= hour < 15 else
+                "afternoon" if 15 <= hour < 18 else
+                "evening" if 18 <= hour < 23 else
+                "overnight"
+            )
+            if value >= THRESHOLD:
+                return {
+                    "recommended_wait_minutes": 0,
+                    "radius_m": None,
+                    "best_window_wait_minutes": 0,
+                    "best_window_radius_m": None,
+                    "partner_probability": None,
+                    "recent_small_orders_600m": features["small_orders_600m_last_15min"],
+                    "recent_small_orders_900m": features["small_orders_900m_last_15min"],
+                    "model_name": "trained partner-arrival classifier",
+                    "forecast_hour": hour,
+                    "daypart": daypart,
+                    "historical_demand_index": round(demand_index, 2),
+                    "historical_demand_change_percent": demand_change,
+                    "disclaimer": (
+                        "The partner forecast is trained for small baskets. This checkout can "
+                        "continue normally; the area and historical order sample are simulated."
+                    ),
+                }
+            probabilities: dict[tuple[int, int], float] = {}
+            for wait in WAITS:
+                for radius in RADII:
+                    _, prediction = predict_from_base(features, wait, radius)
+                    probabilities[(wait, radius)] = prediction["probability"]
+            recommended, best_window, probability = choose_probability_window(
+                probabilities
+            )
+            return {
+                "recommended_wait_minutes": recommended[0] if recommended else 0,
+                "radius_m": recommended[1] if recommended else None,
+                "best_window_wait_minutes": best_window[0] if best_window else 0,
+                "best_window_radius_m": best_window[1] if best_window else None,
+                "partner_probability": round(float(probability), 4),
+                "recent_small_orders_600m": features["small_orders_600m_last_15min"],
+                "recent_small_orders_900m": features["small_orders_900m_last_15min"],
+                "model_name": "trained partner-arrival classifier",
+                "forecast_hour": hour,
+                "daypart": daypart,
+                "historical_demand_index": round(demand_index, 2),
+                "historical_demand_change_percent": demand_change,
+                "disclaimer": (
+                    "The chance is estimated from the saved sample and recent checkouts in this "
+                    "app when available. It is not a live nearby order or a guaranteed pool."
+                ),
+            }
 
     def get_order(self, order_id: int) -> dict[str, Any] | None:
         with self.lock:
@@ -601,11 +780,13 @@ class SimulationRuntime:
             conn.execute(
                 """
                 INSERT INTO app_orders (order_id, source, user_id, cell, t, day, hour, dow, value, n_items, small, status,
-                    wait_minutes, radius_m, partner_order_id, placed_wallclock, customer_name)
-                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+                    wait_minutes, radius_m, partner_order_id, partner_order_ids, access_key_hash,
+                    placed_wallclock, customer_name)
+                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
                 ON CONFLICT(order_id) DO UPDATE SET
                     status=excluded.status, wait_minutes=excluded.wait_minutes, radius_m=excluded.radius_m,
-                    partner_order_id=excluded.partner_order_id
+                    partner_order_id=excluded.partner_order_id, partner_order_ids=excluded.partner_order_ids,
+                    access_key_hash=COALESCE(excluded.access_key_hash, app_orders.access_key_hash)
                 """,
                 (
                     order["order_id"],
@@ -623,6 +804,8 @@ class SimulationRuntime:
                     order.get("wait_minutes"),
                     order.get("radius_m"),
                     order.get("partner_order_id"),
+                    json.dumps(order.get("partner_order_ids", [])),
+                    order.get("access_key_hash"),
                     order.get("placed_wallclock"),
                     order.get("customer_name"),
                 ),

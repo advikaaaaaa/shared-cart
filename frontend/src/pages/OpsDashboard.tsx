@@ -38,24 +38,24 @@ export function OpsDashboard() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="font-display text-3xl">Operations</h1>
-          <p className="text-sm text-ink-500">Live figures from the event player — not hardcoded.</p>
+          <p className="text-sm text-ink-500">The dashboard summarizes the sample order replay. It does not show live customers or deliveries.</p>
         </div>
         <StatusBadge value={data.status.status} />
       </div>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        <MetricCard label="Orders introduced" value={m.introduced ?? 0} />
-        <MetricCard label="Active" value={m.active ?? 0} />
-        <MetricCard label="Waiting" value={m.waiting ?? 0} />
-        <MetricCard label="Pooled" value={m.pooled ?? 0} />
-        <MetricCard label="Dispatched independently" value={m.dispatched_independent ?? 0} />
-        <MetricCard label="Pooling rate" value={`${((m.pooling_rate || 0) * 100).toFixed(1)}%`} />
-        <MetricCard label="Avg wait (sim min)" value={(m.avg_wait || 0).toFixed(2)} />
-        <MetricCard label="Est. savings (₹ sim)" value={(m.estimated_savings || 0).toFixed(0)} hint="Notebook fee formula" />
+        <MetricCard label="Orders replayed" value={m.introduced ?? 0} hint="Sample orders processed so far" />
+        <MetricCard label="Being processed" value={m.active ?? 0} />
+        <MetricCard label="Waiting for a match" value={m.waiting ?? 0} />
+        <MetricCard label="Orders in shared trips" value={m.pooled ?? 0} />
+        <MetricCard label="Sent alone" value={m.dispatched_independent ?? 0} />
+        <MetricCard label="Shared-trip rate" value={`${((m.pooling_rate || 0) * 100).toFixed(1)}%`} hint="Share of replayed orders that joined a trip" />
+        <MetricCard label="Average wait (sample minutes)" value={(m.avg_wait || 0).toFixed(2)} />
+        <MetricCard label="Estimated savings (sample ₹)" value={(m.estimated_savings || 0).toFixed(0)} hint="Illustrative model estimate, not actual money" />
       </div>
       {empty && (
         <EmptyState
           title="No events processed yet"
-          body="Open Simulation and use Next event (or Start) to replay the dataset. Metrics will fill in from actual decisions."
+          body="Open Simulation and choose Next order or Start replay. The numbers here will then reflect the sample orders being processed."
         />
       )}
       <div className="grid gap-4 lg:grid-cols-2">
@@ -72,7 +72,7 @@ export function OpsDashboard() {
           </ResponsiveContainer>
         </div>
         <div className="rounded-2xl border border-stone-200 bg-white p-4">
-          <h2 className="mb-2 text-sm font-semibold">Zone demand (played orders)</h2>
+          <h2 className="mb-2 text-sm font-semibold">Sample orders by area</h2>
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={Object.entries(data.by_zone || {}).map(([name, n]) => ({ name, n }))}>
               <CartesianGrid strokeDasharray="3 3" />
@@ -93,16 +93,17 @@ export function OpsDashboard() {
           ))}
         </select>
       </div>
+      <p className="text-xs text-ink-500">Area numbers are anonymous simulation zones—not addresses or GPS locations. “Match chance” is the model estimate, not a confirmed match.</p>
       <div className="overflow-x-auto rounded-2xl border border-stone-200 bg-white">
         <table className="w-full text-left text-sm">
           <thead className="bg-stone-50 text-xs uppercase text-ink-500">
             <tr>
               <th className="p-3">Order</th>
               <th>Status</th>
-              <th>Decision</th>
-              <th>Value</th>
-              <th>Cell</th>
-              <th>P(partner)</th>
+              <th>Trip decision</th>
+              <th>Basket value</th>
+              <th>Sample area</th>
+              <th>Match chance</th>
             </tr>
           </thead>
           <tbody>
@@ -116,8 +117,8 @@ export function OpsDashboard() {
                   <StatusBadge value={r.decision ? String(r.decision) : null} />
                 </td>
                 <td>₹{String(r.value)}</td>
-                <td>{String(r.cell)}</td>
-                <td>{r.probability != null ? Number(r.probability).toFixed(3) : "—"}</td>
+                <td>{r.cell != null ? `Area ${Number(r.cell) + 1}` : "—"}</td>
+                <td>{r.probability != null ? `${(Number(r.probability) * 100).toFixed(1)}%` : "—"}</td>
               </tr>
             ))}
           </tbody>
@@ -128,7 +129,7 @@ export function OpsDashboard() {
         <ul className="max-h-64 space-y-2 overflow-auto text-sm">
           {(data.timeline || []).slice().reverse().map((h, i) => (
             <li key={i} className="border-b border-stone-100 pb-2">
-              <span className="font-medium">#{h.order_id}</span> · {h.status} @ t={h.sim_t?.toFixed?.(2) ?? h.sim_t} — {h.note}
+              <span className="font-medium">#{h.order_id}</span> · {h.status} at sample minute {h.sim_t?.toFixed?.(0) ?? h.sim_t} — {h.note}
             </li>
           ))}
         </ul>

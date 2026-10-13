@@ -33,6 +33,8 @@ CREATE TABLE IF NOT EXISTS app_orders (
     wait_minutes INTEGER,
     radius_m INTEGER,
     partner_order_id INTEGER,
+    partner_order_ids TEXT,
+    access_key_hash TEXT,
     placed_wallclock TEXT,
     customer_name TEXT
 );
@@ -101,6 +103,10 @@ def init_db(conn: sqlite3.Connection | None = None) -> None:
     own = conn is None
     conn = conn or connect()
     conn.executescript(SCHEMA)
+    order_columns = {row["name"] for row in conn.execute("PRAGMA table_info(app_orders)")}
+    for column in ("partner_order_ids", "access_key_hash"):
+        if column not in order_columns:
+            conn.execute(f"ALTER TABLE app_orders ADD COLUMN {column} TEXT")
     conn.commit()
     if own:
         conn.close()

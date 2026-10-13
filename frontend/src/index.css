@@ -4,7 +4,9 @@
 
 :root {
   color: #1c1917;
-  background: #f7f4f0;
+  background: #fffdf8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
 }
 
 body {

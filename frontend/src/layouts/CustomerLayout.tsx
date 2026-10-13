@@ -3,36 +3,22 @@ import { ShoppingBag } from "lucide-react";
 import { Logo } from "../components/Logo";
 import { useCart } from "../hooks/useCart";
 
-const nav = [
-  { to: "/", label: "Shop" },
-  { to: "/operations", label: "Operations" },
-];
-
 export function CustomerLayout() {
   const { count } = useCart();
   return (
     <div className="min-h-screen">
-      <header className="sticky top-0 z-20 border-b border-stone-200 bg-white/95 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
+      <header className="sticky top-0 z-20 border-b border-stone-200 bg-[#fffdf8]/95 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
           <Link to="/">
             <Logo />
           </Link>
-          <nav className="flex items-center gap-4 text-sm">
-            {nav.map((n) => (
-              <NavLink
-                key={n.to}
-                to={n.to}
-                className={({ isActive }) =>
-                  isActive ? "font-semibold text-brand-600" : "text-ink-700 hover:text-brand-600"
-                }
-              >
-                {n.label}
-              </NavLink>
-            ))}
-            <Link to="/cart" className="relative rounded-full border border-stone-200 p-2 hover:border-brand-500">
-              <ShoppingBag className="h-5 w-5" />
+          <nav className="flex items-center gap-3 text-sm">
+            <NavLink to="/" className={({ isActive }) => isActive ? "hidden font-semibold text-emerald-800 sm:block" : "hidden text-ink-700 hover:text-emerald-800 sm:block"}>Shop</NavLink>
+            <Link to="/cart" className="relative flex items-center gap-2 rounded-full bg-[#183c30] px-4 py-2.5 text-white transition hover:bg-emerald-900">
+              <ShoppingBag className="h-4 w-4" />
+              <span className="hidden text-xs font-semibold sm:block">Your bag</span>
               {count > 0 && (
-                <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-brand-500 px-1 text-[11px] text-white">
+                <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-orange-500 px-1 text-[11px] text-white">
                   {count}
                 </span>
               )}
@@ -40,11 +26,11 @@ export function CustomerLayout() {
           </nav>
         </div>
       </header>
-      <main className="mx-auto max-w-6xl px-4 py-8">
+      <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-8">
         <Outlet />
       </main>
-      <footer className="border-t border-stone-200 py-8 text-center text-xs text-ink-500">
-        SharedCart — Smarter Food Delivery Through Intelligent Order Pooling. Simulated checkout; no payments.
+      <footer className="border-t border-stone-200 bg-white py-5 text-center text-xs text-ink-500">
+        SharedCart · Everyday savings, shared trips. Concept demo only—no live orders or payments.
       </footer>
     </div>
   );
